@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Qloudea</title>
+    </head>
+    <body>
+        <header class="principal">
+            <div id="titulos">
+                <br><br>
+                <h2 id="titulo2">Configure de su NAS Synology</h2>
+            </div>
+        </header>    
+        <div id="cuerpo">
+            <article>
+                <h2>Elija opciones</h2>
+                <form action="" id="formulario">
+                    <p> <label for="modelo">Modelo:</label>
+                        <input type="text" name="modelo" id="modelo" required>
+                    </p>
+                    <p>
+                        <label for="nombre">Nombre : </label>
+                        <input type="text" name="nombre" id="nombre" required>
+                    </p>
+                    <p>
+                        <label for="precio">Precio Base:</label>
+                        <input type="number" name="precio" id="precio" min="0" required>
+                    </p>
+                    Seleccione la categoria de Discos:
+                    <p>
+                        <input type="radio" id="cat1" name="categoria" value="1" checked onclick="cambiaCat()">
+                        <label for="cat1">Categoria 1</label>
+                        <input type="radio" id="cat2" name="categoria" value="2" onclick="cambiaCat()">
+                        <label for="cat2">Categoria 2</label>
+                    </p>
+                    <p>
+                        <fieldset>
+                            <legend>Tipos de Disco:</legend>
+                            <p>
+                                <label for="tipoDisco1">Modelo de Disco Categoria 1</label>
+                                <select id="tipoDisco1" name="tipoDisco"></select> 
+                            </p>
+                            <p>
+                                <label for="discos1">Cantidad:</label>
+                                <input type="number" class="cantidad" name="discos1" id="discos1" value="0" max="4">
+                            </p>    
+                            <p>
+                                <label for="tipoDisco2">Modelo de Disco Categoria 2</label>
+                                <select id="tipoDisco2"  name="tipoDisco" value="0" disabled></select>  
+                            </p>
+                            <p>                         
+                                <label for="discos2">Cantidad:</label>
+                                <input type="number" class="cantidad" name="discos2" id="discos2" max="4" disabled>
+                            </p>
+                            
+                        </fieldset>    
+                    </p>
+                    </p>
+                        <label for="ampliacion">Ampliacion</label>
+                        <select id="ampliacion" name="ampliacion">
+                        </select> 
+                    <p>
+                    
+                    <div id="botones"> 
+                        <input type="submit" value="Enviar" onclick="nuevo(event)">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </article>
+            <aside>
+                <table id="listado" border="1">
+                    <th>Modelo/Cantidad</th>
+                    <th>Nombre</th>
+                    <th>Precio Base</th>
+                    <th>Total</th>
+                </table>
+            </aside>
+        </div>    
+        <script>
+        
+        function nuevo(event) {
+            event.preventDefault();
+            let tabla = document.getElementById("listado");
+            let fila = tabla.insertRow(tabla.rows.length);
+            fila.insertCell(0).innerHTML = document.getElementById("modelo").value;
+            fila.insertCell(1).innerHTML = document.getElementById("nombre").value;
+            fila.insertCell(2).innerHTML = document.getElementById("precio").value;
+            let total = parseInt(document.getElementById("precio").value);
+            fila.insertCell(3).innerHTML = total;
+            let subtotal = 0;
+            console.log(document.getElementById("cat1").checked);
+            if (document.getElementById("cat1").checked){
+                console.log("Elemento:",document.getElementById("tipoDisco1").selectedIndex);
+                let fila = tabla.insertRow(tabla.rows.length);
+                fila.insertCell(0).innerHTML = document.getElementById("discos1").value;
+                fila.insertCell(1).innerHTML = document.getElementById("tipoDisco1")[document.getElementById("tipoDisco1").selectedIndex].text;
+                fila.insertCell(2).innerHTML = discos[document.getElementById("tipoDisco1").selectedIndex].Precio;
+                subtotal = parseInt(discos[document.getElementById("tipoDisco1").selectedIndex].Precio)*parseInt(document.getElementById("discos1").value);
+                total +=subtotal;
+                fila.insertCell(3).innerHTML = subtotal;
+                console.log("Valor Total:",total);
+            } if (document.getElementById("cat2").checked){
+                console.log("Elemento:",document.getElementById("tipoDisco2").selectedIndex);
+                let fila = tabla.insertRow(tabla.rows.length);
+                fila.insertCell(0).innerHTML = document.getElementById("discos2").value;
+                fila.insertCell(1).innerHTML = document.getElementById("tipoDisco2")[document.getElementById("tipoDisco2").selectedIndex].text;
+                fila.insertCell(2).innerHTML = discos[document.getElementById("tipoDisco2").selectedIndex].Precio;
+                subtotal = parseInt(discos[document.getElementById("tipoDisco2").selectedIndex].Precio)*parseInt(document.getElementById("discos2").value);
+                total +=subtotal;
+                fila.insertCell(3).innerHTML = subtotal;
+                console.log("Valor Total:",total);
+            }
+            let lineaTotal = tabla.insertRow(tabla.rows.length);
+            lineaTotal.insertCell(0).innerHTML = "";
+            lineaTotal.insertCell(1).innerHTML = "";
+            lineaTotal.insertCell(2).innerHTML = "Total General : "
+            lineaTotal.insertCell(3).innerHTML = total;
+            // fila.insertCell(3).innerHTML = document.getElementById("telefono").value;
+
+        }
+
+        
+        async function leer() {
+            let elem = "./ampliacion.json";
+            let obj = await fetch(elem);
+            let content = await obj.text();
+            ampliaciones = JSON.parse(content).memoria;
+            elem = "./discos.json";
+            obj = await fetch(elem);
+            content = await obj.text();
+            discos = JSON.parse(content).unidades;
+        };
+
+        window.onload = async function() {
+            await leer();
+            console.log(discos);
+            let porDefectoDisco1 = document.createElement('option');
+            porDefectoDisco1.text = 'Elija Discos';
+            let porDefectoDisco2 = document.createElement('option');
+            porDefectoDisco2.text = 'Elija Discos';
+            let comboDisco1 = document.getElementById('tipoDisco1');
+            let comboDisco2 = document.getElementById('tipoDisco2');
+            comboDisco1.length = 0;
+            comboDisco2.length = 0;
+         
+            comboDisco1.add(porDefectoDisco1);
+            comboDisco1.selectedIndex = 0;
+            comboDisco2.add(porDefectoDisco2);
+            comboDisco2.selectedIndex = 0;
+            for (let i = 0; i < discos.length; i++) {
+                if (discos[i].Categoria ==1) {
+                    option = document.createElement('option');
+                    option.text = discos[i].Descripcion;
+                    option.value = discos[i].Precio;
+                    comboDisco1.add(option);    
+                }
+                if (discos[i].Categoria ==2) {
+                    option = document.createElement('option');
+                    option.text = discos[i].Descripcion;
+                    option.value = discos[i].Precio;
+                    comboDisco2.add(option);
+                }
+            };
+            let porDefectoAmpliacion = document.createElement('option');
+            porDefectoAmpliacion.text = 'Elija Ampliación';
+            let comboAmpliacion = document.getElementById('ampliacion');
+            comboAmpliacion.add(porDefectoAmpliacion);
+            comboAmpliacion.selectedIndex = 0;
+            for (let i = 0; i < ampliaciones.length; i++) {
+                option = document.createElement('option');
+                option.text = ampliaciones[i].Descripcion;
+                option.value = ampliaciones[i].Precio;
+                comboAmpliacion.add(option);    
+            }    
+        };
+        function cambiaCat() {
+            document.getElementById("tipoDisco1").toggleAttribute("disabled");
+            document.getElementById("tipoDisco2").toggleAttribute("disabled");
+            document.getElementById("discos1").toggleAttribute("disabled");
+            document.getElementById("discos2").toggleAttribute("disabled");
+            document.getElementById("discos1").innerText = 0;
+            document.getElementById("discos2").innerText = 0;
+        }
+
+        let ampliaciones = [];
+        let discos = [];
+        </script>
+    </body>
+</html>    
+

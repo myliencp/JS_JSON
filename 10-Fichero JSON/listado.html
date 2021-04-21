@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Ficha de articulos</h1>
+        <form action="" id="formulario">
+            <div id="datos">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo">          
+                <label for="descripcion">Descrición:</label>
+                <input type="text" id="descripcion">           
+                <label for="descripcion">Stock:</label>
+                <input type="number" id="descripcion">            
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio"> 
+                </div>      
+            <div id="botones">
+                <input type="button" id="nuevo" value="Nuevo" >
+                <input type="button" id="modificar" value="Modificar" >
+                <input type="button" id="eliminar" value="Eliminar" >
+                <input type="submit" id="aceptar" value="Aceptar">
+                <input type="reset" id="cancelar"  value="Cancelar">
+            </div>
+            
+            <div id="buscar">
+                <label for="buscar">Dato a buscar:</label>
+                <br>
+                <input type="text" id="buscar">     
+
+            </div>     
+                
+        </form>
+
+    </header>
+    <div id="cuerpo">
+            <table id="listado" border="1">
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Stock</th>              
+                <th>Precio </th>  
+                    
+            </table>
+        </article>
+        <aside>
+            <img src="" alt="Foto" srcset="">
+        </aside>
+    </div>
+    <script src="carga.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Concesionario</title>
+    </head>
+    <body>
+        <header class="principal">
+            <div id="titulos">
+                <h1 id="titulo1">Concesionario de Coches</h1>
+                <br><br>
+                <h2 id="titulo2">Listado de Vehiculos</h2>
+            </div>
+        </header>    
+        <div id="cuerpo">
+            <article>
+                <h2>Ficha de Coches</h2>
+                <form action="" id="formulario">
+                    <p> <label for="marca">Marca:</label>
+                        <input type="text" id="marca">                      
+                     
+                    </p>
+                    <p>
+                        <label for="modelo">Modelo: </label>
+                        <input type="text" name="modelo" id="modelo">
+                    </p>
+                    <p>
+                        <label for="anyo">Año:</label>
+                        <input type="number" name="anyo" id="anyo" >
+                    </p>
+                    <p>
+                        <label for="precio">Precio:</label>
+                        <input type="number" name="precio" id="precio" >
+                    </p>                    
+                    
+                    
+                    <div id="botones"> 
+                        <input type="submit" value="Enviar" onclick="nuevo(event)">
+                        <input type="reset" value="Borrar">
+                        <input type="button" value="Listar contenido" onclick="listar()">
+                    </div>
+
+                    <h3 id="stock"></h3>
+                </form>
+
+            </article>
+            <aside>
+                <table id="listado" border="1">
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>    
+                    <th>Antiguedad</th>    
+                    <th>Precio </th>  
+                    <th>IGIC</th>
+                    <th>Total</th>         
+                </table>
+            </aside>
+        </div>    
+        <script>
+            function nuevo(event){
+                event.preventDefault();
+                let coche = new vehiculo();
+                coche.marca = document.getElementById("marca").value;
+                coche.modelo = document.getElementById("modelo").value;
+                coche.anyo = document.getElementById("anyo").value;
+                coche.precio = document.getElementById("precio").value;
+                vector.push(coche);
+                document.getElementById("stock").innerHTML = "Total  " + vector.length + "  coche(s)";
+                //console.log(vector);
+
+            }
+        
+            function listar() {
+            
+                let tabla = document.getElementById("listado");
+
+                while(tabla.rows.length > 1)
+                    {tabla.deleteRow(1)};
+                
+                for(let i=0 ; i<vector.length;i++){
+                    let fila = tabla.insertRow(tabla.rows.length);
+                    fila.insertCell(0).innerHTML = vector[i].marca;
+                    fila.insertCell(1).innerHTML = vector[i].modelo;
+                    fila.insertCell(2).innerHTML = vector[i].anyo;
+                    fila.insertCell(3).innerHTML = vector[i].antiguedad();
+                    fila.insertCell(4).innerHTML = formato(vector[i].precio);
+                    fila.insertCell(5).innerHTML = vector[i].igic();
+                    fila.insertCell(6).innerHTML = vector[i].total();
+                    
+                    // let hoy=new Date();
+                    // //fila.insertCell(3).innerHTML = (hoy.getFullYear()-vector[i].anyo);
+                    
+                }
+                vector = []
+                document.getElementById("stock").innerHTML = "Total  " + vector.length + "  coche(s)";
+                
+            }
+            let vector = [];   
+            class vehiculo{
+                constructor(marca,modelo,anyo,precio){
+                    this.marca=marca;
+                    this.modelo=modelo;
+                    this.anyo=anyo;
+                    this.precio=precio;
+                }
+                antiguedad(){
+                
+                    return ((new Date()).getFullYear() - this.anyo);
+                }
+            
+                igic(){                    
+                
+                    return (formato(this.precio*0.07));
+                }
+
+                total(){
+                    
+                    return (formato(this.precio*1.07));
+                }
+            }   
+            function formato(valor){
+                return (new Intl.NumberFormat("es-ES", {style: "currency", currency: "EUR"}).format(valor));
+
+            }         
+
+        </script>
+    </body>
+</html>    
+

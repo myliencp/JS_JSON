@@ -1,0 +1,89 @@
+body {
+    margin: 3px;
+    font-size: small;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header {
+    display:flex;
+    flex-flow: column center;
+    width: 100%;
+    height: 120px;
+    /* padding-left: 5%; */
+    background: url("./imagenes/qloudea.png");
+    background-position: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2 {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-size: 1em;
+}
+#titulo2 {
+    color: white;
+    
+}
+#cuerpo {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #8d3838;
+    height: 100%;
+    border: 0px;
+    padding: 0px;
+}
+
+article {
+    width: 30%;
+    background: yellow ;
+    border: 1px solid black;
+    padding-left: 10px;
+} 
+
+aside {
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    background: gray;
+    border: 1px solid black;
+    /* overflow:scroll; */
+} 
+#formulario {
+    padding-top: 10px;
+    height: 60vh;
+}
+
+#botones {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+table thead tr{
+    display:block;
+}
+
+table th,table td{
+    width:17vw;
+    border: 1px black solid;
+}
+
+
+table  tbody{
+  display:block;
+  height:59vh;
+  overflow:auto;
+}
+table.precio td.totales {
+    text-align: right;
+}
+select {
+    width: 80%;
+}
+.cantidad {
+    width: 10%;
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo validación número</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        body {
+            background-color: rgb(187, 187, 166);
+            font-family: sans-serif;
+        }
+        label {
+            color: rgb(60, 58, 184);
+            display: block;
+            padding: 5px;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.formularioContacto.nombre.focus();
+            document.formularioContacto.addEventListener('submit', validarFormulario);
+        }
+
+        function validarFormulario(evObject) {
+            evObject.preventDefault();
+            var todoCorrecto = true;
+            var formulario = document.formularioContacto;
+            if (/^\s*$/.test(formulario.nombre.value) == true) {
+                alert('El nombre no puede estar vacio');
+                todoCorrecto = false;
+            }
+            if (/^[1-9]\d?$/.test(formulario.edad.value) == false) {
+                alert('Edad no valida');
+                todoCorrecto = false;
+            }
+            if (/^[1-2]\,\d{2}$/.test(formulario.altura.value) == false) {
+                alert('Altura no valida');
+                todoCorrecto = false;
+            }
+            if (todoCorrecto == true) {
+                formulario.submit();
+            }
+        }
+        function controlAltura(e) {
+            console.log(e.keyCode);
+            if (!((e.keyCode >= 48 && e.keyCode <=57)
+                || e.keyCode == 8 
+                || e.keyCode == 188
+                || (e.keyCode >= 96 && e.keyCode <=105)) ) {
+                e.preventDefault();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="cabecera">
+        <h1>Ejemplo de Validación</h1>
+        <h2>Validación de formulario</h2>
+    </div>
+
+    <!-- Formulario de contacto -->
+
+    <form name="formularioContacto" class="formularioTipo1" method="get" action="">
+        <p>Si quieres contactar con nosotros envíanos este formulario relleno:</p>
+        <label for="nombre"><span>Nombre:</span> <input id="nombre" type="text" name="nombre" required/></label>
+        <label for="apellidos"><span>Edad:</span> <input id="edad" type="text" name="edad" /></label>
+        <label for="altura"><span>Altura:</span> <input id="altura" type="text" name="altura" onkeydown="controlAltura(event)"/></label>
+        <label><input type="submit" value="Enviar"><input type="reset" value="Cancelar"></label>
+    </form>
+</body>
+
+</html>

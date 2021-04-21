@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compatibilidad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Analisis de Compatibilidad</h1>
+    </header>
+    <article>
+    <form action="" id="formulario"></form>
+        <div id="izquierda">
+            <h2>Persona 1</h2>           
+            <p><label for="nombre">Nombre:</label></p>
+                <input type="text" id="nombre1" >
+            <p><label for="sexo">Sexo:</label></p>
+                 <select name="sexo" id="sexo1">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                 </select>
+            <p><label for="edad">Edad:</label></p>
+                <input type="number" id="edad1" min="1" max="99" >
+            <p><label for="musica">Música favorita:</label></p>
+                <select name="musica" id="musica1">
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="heavy">Heavy Metal</option>
+                    <option value="clasico">Clásica</option>
+                    <option value="blues">Blues</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Disco">Disco</option>
+                </select>
+            <p><label for="horoscopo">Horóscopo:</label></p>
+                <select name="horoscopo" id="horoscopo1">
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                </select>       
+        </div>
+        <div id="derecha">
+            <h2>Persona 2</h2>
+            <p><label for="nombre">Nombre:</label></p>
+                 <input type="text" id="nombre2" >
+            <p><label for="sexo">Sexo:</label></p>
+                <select name="sexo" id="sexo2">
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                </select>
+            <p><label for="edad">Edad:</label></p>
+                <input type="number" id="edad2" min="1" max="99" >
+            <p><label for="musica">Música favorita:</label></p>
+                <select name="musica" id="musica2">
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="heavy">Heavy</option>
+                    <option value="metal">Metal</option>
+                    <option value="clasica">Clasica</option>
+                    <option value="reggaeton">Reggaeton</option>
+                </select>
+            <p><label for="horoscopo">Horóscopo:</label></p>
+                <select name="horoscopo" id="horoscopo2">
+                    <option value="acuario">Acuario</option>
+                    <option value="piscis">Piscis</option>
+                    <option value="aries">Aries</option>
+                    <option value="tauro">Tauro</option>
+                    <option value="geminis">Géminis</option>
+                    <option value="cancer">Cáncer</option>
+                    <option value="leo">Leo</option>
+                    <option value="virgo">Virgo</option>
+                    <option value="libra">Libra</option>
+                    <option value="escorpio">Escorpio</option>
+                    <option value="sagitario">Sagitario</option>
+                    <option value="capricornio">Capricornio</option>
+                </select>                
+                      
+        </div>        
+    </form> 
+    </article>
+
+    <div id="botondiv">
+        <input type="button" name="boton" id="boton" value="Analizar" onclick="mensaje()">
+    </div>
+
+       
+    <div>
+        <p id="respuesta"></p>
+    </div> 
+   
+    <script src="calcular.js"></script>
+    
+   
+    
+</body>
+</html>

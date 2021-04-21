@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Mercadona</title>
+    </head>
+    <body>
+        <header class="principal">
+            <div id="titulos">
+                <h1 id="titulo1">Supermecados Mercadona</h1>
+                <br><br>
+                <h2 id="titulo2">Listado de Personal</h2>
+            </div>
+        </header>    
+        <div id="cuerpo">
+            <article>
+                <h2>Ficha de Personal</h2>
+                <form action="" id="formulario">
+                    <p> <label for="dni">DNI:</label>
+                        <input type="number" name="dni" id="dni" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onfocusout="calculo()">
+                        <label id="letra"></label>
+                    </p>
+                    <p>
+                        <label for="nombre">Nombre : </label>
+                        <input type="text" name="nombre" id="nombre">
+                    </p>
+                    <p>
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" name="apellidos" id="apellidos" >
+                    </p>
+                    <p>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" name="telefono" id="telefono">
+                    </p>
+                    <div id="botones"> 
+                        <input type="submit" value="Enviar" onclick="nuevo(event)">
+                        <input type="reset" value="Borrar">
+                    </div>
+                </form>
+            </article>
+            <aside>
+                <table id="listado" border="1">
+                    <th>DNI</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                </table>
+            </aside>
+        </div>    
+        <script>
+        function calculo(){
+            let letraCalculada = letras[document.getElementById("dni").value % 23];
+            document.getElementById("letra").innerHTML = letraCalculada;
+        };    
+        function nuevo(event) {
+            event.preventDefault();
+            let tabla = document.getElementById("listado");
+            let fila = tabla.insertRow(tabla.rows.length);
+            fila.insertCell(0).innerHTML = document.getElementById("dni").value+" - "+document.getElementById("letra").innerText;
+            fila.insertCell(1).innerHTML = document.getElementById("nombre").value;
+            fila.insertCell(2).innerHTML = document.getElementById("apellidos").value;
+            fila.insertCell(3).innerHTML = document.getElementById("telefono").value;
+        }
+
+        let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+        </script>
+    </body>
+</html>    
+

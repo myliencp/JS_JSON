@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="tabla.css">
+    <script src="javascript.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="imagen"> 
+            <picture>
+            <source media="(max-width: 800px)" srcset="imagenes/logoten-m.png">
+            <source media="(max-width: 320)" srcset="imagenes/logoten-p.png">
+            <img src="imagenes/logoten.png" alt="Tenerife System" >  
+            </picture>
+            
+        </div>
+        <div id="nombre">
+            <h1>Tenerife System SLL</h1> 
+            <h2>Asesoramiento informático</h2>
+            <br>
+            <p>Calle Doctor Marañon 3</p>
+            <p>38207 - San Cristóbal de la Laguna</p>
+        </div>
+        <div id="cliente">
+            <form action="">
+                
+                    <label for="nomclien">Cliente :</label>
+                    <input type="text" id="nomclien" maxlength="20" size="20">
+                    <br><br>
+                
+                    <label for="nif">NIF:</label>
+                    <input type="text" id="nif" maxlength="10" size="10">
+                    <br><br>
+                
+                    <label for="dir">Dirección:</label>
+                    <input type="text" id="dir" maxlength="20" size="20">
+                    <br><br>
+                
+                    <label for="cp">CP - Pob.:</label>
+                    <input type="text" id="cp" maxlength="5" size="5" onfocusout="cargaPoblacion()">
+                    <p id="poblacion"></p>
+                    <br>
+                
+                    <label for="localidad">Localidad : </label>
+                    <input type="text" id="localidad" maxlength="20" size="20">
+                
+            </form>    
+        </div>
+        </header>
+        <table id="tablita" >
+        
+        <tr>
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th class="columna" ></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+       
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="columna"></td>
+        </tr>
+     </table>
+    <div id="prueba">
+        <button type="submit" id="editar">E</button>
+        <button type="submit" id="eliminar">B</button>
+        <button type="submit" id="guardar">G</button>
+        <button type="submit" id="cancelar">C</button>
+    </div>
+</body>
+</html>
+
+<!-- Icomonn free 
+https://icomoon.io/app/#/select -->

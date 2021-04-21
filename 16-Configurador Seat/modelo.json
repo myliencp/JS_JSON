@@ -1,0 +1,16 @@
+{
+    "modelo": [
+      {
+        "Descripcion": "Seat Arona Gasolina",
+        "Precio": "13500"
+      }, 
+      {
+        "Descripcion": "Seat Arona Diesel",
+        "Precio": "14800"
+      }, 
+      {
+        "Descripcion": "Seat Arona Hibrido",
+        "Precio": "17500"
+      }
+      ]
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="modal.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <header class="alDarClick">
+        <h2>Ficha de Articulos</h2>
+        <div id="json"></div>
+        <form action="" id="formulario" onsubmit="aceptar(event)"> 
+            <div id="campos">
+                <input type="text" id="id" hidden>
+                <input type="text" id="foto" hidden>
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo">
+                <label for="codigo">Descripción:</label>
+                <input type="text" id="descripcion">
+                <label for="codigo">Stock:</label>
+                <input type="number" id="stock">
+                <label for="codigo">Precio:</label>
+                <input type="number" id="precio">
+            </div>
+            <div id="foto">
+                <img src="" id=fotografia alt="">
+                <input type="file" id="nuevaFoto" accept="image/x-png,image/gif,image/jpeg" onchange="cambiaFoto(this)"/>
+            </div>
+            <div id="botones">
+                <div id="botonesIzquierda">
+                    <input type="button" value="Nuevo" onclick="nuevo()">
+                    <input type="button" value="Modificar" onclick="modRegistro()">
+                    <input type="button" value="Eliminar" onclick="eliRegistro()">
+                    <input type="button" value="Descargar fichero" onclick="guardaArchivo()">
+                </div>
+                <div id="botonesDerecha">
+                    <input type="submit" value="Aceptar" >
+                    <input type="reset" value="Cancelar">
+                </div>
+            </div>
+        </form>
+    </header>
+    <nav class="alDarClick">
+        <label for="filtro">Dato a buscar :</label>
+        <input type="text" name="filtro" id="filtro" oninput="filtrar()">
+    </nav>
+    <article class="alDarClick">
+        <div id="izquierda">
+            <table id="lista-articulos">
+                <thead id="titulos">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Codigo</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="derecha">
+            <img  id="imagen" alt="Foto del equipo">
+        </div>
+        <div id="id01" class="modal">
+            <!-- La X de cerrar documento -->
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            
+            <!-- Formulario con dos botones (cancelar y eliminar) -->
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                <p id="titulo">Eliminar Registro</p>
+                <p>¿Esta seguro?</p>
+    
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancelar</button>
+                    <button type="button" class="deletebtn" onclick="auxElimina()">Eliminar</button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </article>
+    
+    <script src="carga.js"></script>
+</body>
+</html>

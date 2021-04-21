@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body{
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="titulo">Ejercicio Básico con Javascript</h1>
+        <h2>Partimos de la base de trabajar con variables y objetos en Javascript</h2>
+        <h2>Obtendremos valores de los objetos html para cambiar las caracteristicas de la pagina en javascript</h2>
+        <form action="">
+            <label for="color">Elija el color de fondo de la pagina : </label>
+            <input type="color" name="color" id="cambiacolB" onchange="cambiacolorfondo()">
+            <br><br>
+            <label for="color">Elija el color de Titulos h2 de la pagina : </label>
+            <input type="color" name="color" id="cambiacolH" onchange="cambiacolortitulos()">
+            <br><br>
+            <label for="tit">Elija el  Titulo h1 de la pagina : </label>
+            <input type="text" name="tit" id="cambiatit" >
+            <input type="button" value="Aceptar" onclick="cambiatitulos()">
+            <br><br>
+            <label for="foto">De click para cambiar el fondo de la pagina : </label>
+            <input type="button" value="Foto o en Blanco" onclick="cambiafoto()">
+            <br><br>
+            <label for="foto">Elija el fondo de la pagina : </label>
+            <input type="file" value="Seleccione foto de disco" id="buscar" accept=".gif,.jpg,.jpeg,.png" onchange="buscafoto()">
+            <!-- onchange="buscafoto()" -->
+        </form>
+        
+        <script  src="javascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="agregar()">Agregar Columna</button>
+    <div id="contenedor">
+        <div class="contenido">Descripción</div>
+        <div class="contenido">Precio</div>
+   
+    </div>
+
+    <script>
+        function agregar() {
+            let contenedor = document.getElementById("contenedor");
+            let columnas = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--columnas"));
+            for (var i=0;i<modelos.length;i++){
+                let elemento = `<div class="contenido" 
+                                style="
+                                background-color: darkred;
+                                border: 1px black solid;">${modelos[i].Descripcion}</div>`
+                contenedor.innerHTML += elemento;
+                elemento = `<div class="contenido" 
+                                style="
+                                background-color: darkred;
+                                border: 1px black solid;">${modelos [i].Precio}</div>`
+                contenedor.innerHTML += elemento;
+            }   
+        }
+        async function leer() {
+            let elem = "./modelo.json";
+            let obj = await fetch(elem);
+            let content = await obj.text();
+            modelos = JSON.parse(content).modelo;
+        }
+        window.onload = async function() {
+            await leer();
+            agregar();
+        }
+        let modelos=[];
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+    margin: 3px;
+    font-size: small;
+    font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    background: url("./imagenes/unnamed.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+header {
+    display:flex;
+    flex-flow: column center;
+    width: 100%;
+    height: 120px;
+    /* padding-left: 5%; */
+    background: url("./imagenes/qloudea2.jpg");
+    background-position: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2 {
+
+    font-size: 1.2em;
+}
+#titulo2 {
+    color: white;
+    
+}
+#cuerpo {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: white;
+    height: 100%;
+    border: 0px;
+    padding: 0px;
+}
+
+article {
+    width: 30%;
+    background: rgb(221, 170, 31);
+    border: 1px solid black;
+    padding-left: 10px;
+} 
+
+#foto {
+    width: 100px;
+    height: auto;
+    margin-left: 32%;
+    border: rgb(52, 145, 137) 1px solid;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+aside {
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    background: rgb(52, 145, 137);
+    border: 1px solid black;
+    /* overflow:scroll; */
+} 
+#formulario {
+    padding-top: 10px;
+    height: 70vh;
+    font-weight: bold;
+    color: black;
+}
+
+#campos input{
+    width: 95%;
+}
+
+#botones {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    margin-left: 20%;
+}
+
+table thead tr{
+    display:block;
+}
+
+table th,table td{
+    width:17vw;
+    border: 1px black solid;
+}
+
+
+table  tbody{
+  display:block;
+  height:69vh;
+  overflow:auto;
+}
+table tbody>tr>td:nth-child(4n) {
+    text-align: right;
+    width: 10%;
+}
+table tbody>tr>td:nth-child(4n-1) {
+    text-align: right;
+    width: 10%;
+}
+table tbody>tr>td:nth-child(1) {
+    text-align: center;
+    width: 10%;
+}
+table tbody>tr:last-child>td:nth-child(1n+3) {
+    color: rgb(221, 170, 31);
+    font-weight: bold;
+    width: 10%;
+
+}
+
+select {
+    width: 80%;
+}
+.cantidad {
+    width: 10%;
+}
+
+textarea{
+    width: 95%;
+    
+}
+

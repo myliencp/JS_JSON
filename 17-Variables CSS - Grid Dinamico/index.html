@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contenedor"></div>
+    <script>
+        function agregar() {
+            let contenedor = document.getElementById("contenedor");
+            let columnas = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--columnas"));
+            document.documentElement.style.setProperty("--columnas",Object.keys(modelo[0]).length);
+            for (var j=0;j<Object.keys(modelo[0]).length;j++) {
+                let elemento = `<div class="contenido" 
+                                style="
+                                background-color: grey;
+                                color: white;
+                                text-align: center ;
+                                border: 1px black solid;">${Object.keys(modelo[0])[j]}</div>`
+                    contenedor.innerHTML += elemento; 
+            }
+            for (var i=0;i<modelo.length;i++){
+                for (var j=0;j<Object.keys(modelo[i]).length;j++) {
+                    let elemento = `<div class="contenido" 
+                                style="
+                                background-color: green;
+                                border: 1px black solid;">${Object.values(modelo[i])[j]}</div>`
+                    contenedor.innerHTML += elemento;  
+                }
+            }
+        }
+        async function leer() {
+            let elem = "./discos.json";
+            let obj = await fetch(elem);
+            let content = await obj.text();
+            modelo = JSON.parse(content).unidades;
+        };
+        window.onload = async function() {
+            await leer();
+            agregar();
+        }
+        let modelo = [];
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de Arrays</title>
+</head>
+<body>
+    <h1>Manejo de vectores</h1>
+    <h2>Vector inicial : ("Ford","Opel","BMW","Mercedes Benz","Fiat")</h2>
+    <p><h3>Convertir vector a string</h3>
+        <input type="button" value="Convertir" onclick="convertir()">
+        <span id="resultado"> </span>
+        <br>
+        <span id="resultado1"> </span>        
+    </p>
+    <p><h3>Eliminar el ultimo elemento</h3>
+        <input type="button" value="Eliminar ultimo" onclick="eliminaUltimo()">
+        <span id="resultado2"> </span>
+        <br>
+        <span id="resultado3"> </span>   
+    </p>
+    <p><h3>Agrega nuevo elemento al final</h3>
+        <input type="button" value="Agregar ultimo" onclick="agregaUltimo()">
+        <span id="resultado4"> </span>
+        <br>
+        <span id="resultado5"> </span>   
+    </p>
+    <p><h3>Elimina el primer elemento</h3>
+        <input type="button" value="Elimina primero" onclick="eliminaPrimero()">
+        <span id="resultado6"> </span>
+        <br>
+        <span id="resultado7"> </span>   
+    </p>
+    <p><h3>Agrega nuevo primer elemento</h3>
+        <input type="button" value="Agregar primero" onclick="agregaPrimero()">
+        <span id="resultado8"> </span>
+        <br>
+        <span id="resultado9"> </span>   
+    </p>
+    <p><h3>Elimina el tercer elemento</h3>
+        <input type="button" value="Eliminar tercer elemento" onclick="eliminaTercero()">
+        <span id="resultado10"> </span>
+        <br>
+        <span id="resultado11"> </span>   
+    </p>
+    <p><h3>Uso del Splice para agregar elemento </h3>
+        <input type="button" value="Agregar elemento con Splice" onclick="spliceAgrega()">
+        <span id="resultado12"> </span>
+        <br>
+        <span id="resultado13"> </span>   
+    </p>
+    <p><h3>Uso del Slice para cortar elemento </h3>
+        <input type="button" value="Cortar elemento con Slice" onclick="sliceCorta()">
+        <span id="resultado14"> </span>
+        <br>
+        <span id="resultado15"> </span>   
+    </p>
+    <p><h3>Vector ordenado </h3>
+        <input type="button" value="Ordenar" onclick="ordena()">
+        <span id="resultado16"> </span>
+        <br>
+        <span id="resultado17"> </span>   
+    </p>
+    <script>
+        let vector = ["Ford","Opel","BMW","Mercedes Benz","Fiat"];
+
+        function convertir(){
+            document.getElementById("resultado").innerHTML = vector.toString();//Aparecen con comas
+            document.getElementById("resultado1").innerHTML = vector.join("");//No salen comas, es igual a un string pero puedes elegir el separador.
+        }
+        function eliminaUltimo(){
+            document.getElementById("resultado2").innerHTML = vector.pop();
+            document.getElementById("resultado3").innerHTML = vector.toString();
+
+        }
+        function agregaUltimo(){
+            document.getElementById("resultado4").innerHTML = vector.push("Skoda");
+            document.getElementById("resultado5").innerHTML = vector.toString();
+
+        }
+        function eliminaPrimero(){
+            document.getElementById("resultado6").innerHTML = vector.shift();
+            document.getElementById("resultado7").innerHTML = vector.toString();
+        }
+        function agregaPrimero(){
+            document.getElementById("resultado8").innerHTML = vector.unshift("Volswagen");
+            document.getElementById("resultado9").innerHTML = vector.toString();
+        }
+        function eliminaTercero(){
+            document.getElementById("resultado10").innerHTML = delete vector[3];
+            document.getElementById("resultado11").innerHTML = vector.toString();
+          
+        }
+        function spliceAgrega(){
+            document.getElementById("resultado12").innerHTML = vector.splice(2,2,"Seat","Citroen");
+            document.getElementById("resultado13").innerHTML = vector.toString();
+          
+        }
+        function sliceCorta(){
+            document.getElementById("resultado14").innerHTML = vector.slice(2,4);
+            document.getElementById("resultado15").innerHTML = vector.toString();
+          
+        }
+        function ordena(){
+            document.getElementById("resultado16").innerHTML = vector.sort();
+            document.getElementById("resultado17").innerHTML = vector.reverse();//Al reves
+          
+        }
+
+
+        
+
+    </script>
+</body>
+</html>

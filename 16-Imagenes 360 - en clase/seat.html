@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador Seat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header class="principal">
+      <div id="titulos">
+          <br><br>
+          <h2 id="titulo2">Configure su coche SEAT</h2>
+      </div>
+  </header>    
+  <div id="cuerpo">
+      <article>
+        <img id="foto" src="./imagenes/Arona/coche1.jpg" alt="">
+          <form action="" id="formulario" onsubmit="enviar(event)">
+              <div id="campos">
+                  <p> <label for="modelo">Modelo:</label><br>
+                      <select name="modelo" id="modelo" onchange="cambioModelo()"></select>
+                  </p>
+                  <p>
+                      <label for="color">Color : </label><br>
+                      <select id="color" name="color"></select> 
+                  </p>
+                  <p>
+                      <label for="potencia">Potencia: </label><br>
+                      <select id="potencia" name="potencia"></select> 
+                  </p>
+                
+              </div>             
+              
+              <div id="botones"> 
+                  <input type="submit" value="Enviar">
+                  <input type="reset" value="Borrar">                
+                  
+              </div>
+          </form>
+      </article>
+      <aside>
+          <table id="listado" border="1">
+              <th>Descripcion</th>
+              <th>Precio Base</th>
+              <th>IGIC</th>
+              <th>Total</th>
+          </table>
+      </aside>
+  </div>    
+  <script src="carga.js"></script>
+
+</body>
+</html>

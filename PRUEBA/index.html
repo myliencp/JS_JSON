@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+      li {
+        color: wheat;
+      }
+    </style> -->
+  </head>
+  <body>
+    <form action="">
+      <label for="dni">DNI</label>
+      <input type="number" id="dni" name="dni" min="00000000" max="99999999" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength); ">
+      <input type="submit" value="enviar">
+    </form>
+    <ul>
+      <li class="lista">Esto</li>
+      <li class="lista">es una</li>
+      <li class="lista">Prueba</li>
+    </ul>
+    <form action=""></form>
+    <p>
+      Elija un auto:
+    </p>
+    <select label="Ferrari">
+    <optgroup>
+      <option>458 Spider</option>
+      <option>F2 Berlinetta</option>
+      <option>California Y</option>
+    </optgroup>
+    <optgroup>
+      <select label="Porche">
+      <option>Mecan</option>
+      <option>918 Spyder</option>
+      </optgroup>
+    </select>
+    <form action="">
+      <input id="texto" type="text" onkeyup="cambiaUno()" />
+      <input type="button" value="cambia primer hijo de cada ul" onclick="cambiatodo()" />
+      <input type="button" value="Alternarcolor" onclick="cambiaLIsta()" />
+    </form>
+   
+    <script>
+      function cambiaUno() {
+        let lis = document.querySelection("lis");
+        lis.style.color = "blue";
+        for (var i = 0 ;i < elemento.length;i++) {
+          if (elemento[i].style.color == "wheat") {
+          elemento[i].style.color = "blue";
+        }else {
+          elemento[i].style.color = "wheat";
+        }
+        }
+      }
+      function cambiaTodo() {
+        let lis = document.querySelection('lista');
+        for (let j= 0; j <lis.length;i++) {
+          lis[i].style.color = 'green';
+        }
+        document.body.style.background = "red";
+        document.getElementById("texto").style.background = "green";
+      }
+      function capturar() {
+          console.log(document.getElementById("texto").value);
+      }
+      var listas = document.getElementsByClassName("lista")
+      for (var i = 0 ;i < listas.length;i++) {
+        listas[i].style.color = 'wheat';
+      }  
+    </script>
+  </body>
+</html>

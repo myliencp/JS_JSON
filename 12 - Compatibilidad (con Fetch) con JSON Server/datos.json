@@ -1,0 +1,336 @@
+{
+    "signos": [
+      {
+        "mujer": "aries",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "aries",
+        "hombre": "geminis"
+      }, 
+      {
+        "mujer": "aries",
+        "hombre": "cancer"
+      }, 
+      {
+        "mujer": "aries",
+        "hombre": "libra"
+      }, 
+      {
+        "mujer": "aries",
+        "hombre": "escorpion"
+      }, 
+      {
+        "mujer": "aries",
+        "hombre": "sagitario"
+      }, 
+      {
+        "mujer": "aries",
+        "hombre": "acuario"
+      },
+      {
+      "mujer": "tauro",
+      "hombre": "leo"
+      }, 
+      {
+      "mujer": "tauro",
+      "hombre": "virgo"
+      }, 
+      {
+        "mujer": "tauro",
+        "hombre": "acuario"
+      },
+      {
+        "mujer": "tauro",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "tauro",
+        "hombre": "capricornio"
+      }, 
+      {
+        "mujer": "tauro",
+        "hombre": "piscis"
+      }, 
+      {
+        "mujer": "tauro",
+        "hombre": "sagitario"
+      }, 
+      {
+        "mujer": "tauro",
+        "hombre": "acuario"
+      },
+      {
+        "mujer": "tauro",
+        "hombre": "capricornio"
+      }, 
+      {
+        "mujer": "geminis",
+        "hombre": "aries"
+      }, 
+      {
+        "mujer": "geminis",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "geminis",
+        "hombre": "geminis"
+      },
+      {
+        "mujer": "geminis",
+        "hombre": "libra"
+      }, 
+      {
+        "mujer": "geminis",
+        "hombre": "acuario"
+      }, 
+      {
+        "mujer": "geminis",
+        "hombre": "piscis"
+      },
+      {
+        "mujer": "cancer",
+        "hombre": "tauro"
+      },
+      {
+        "mujer": "cancer",
+        "hombre": "cancer"
+      }, 
+      {
+        "mujer": "cancer",
+        "hombre": "leo"
+      }, 
+      {
+        "mujer": "cancer",
+        "hombre": "virgo"
+      }, 
+      {
+        "mujer": "cancer",
+        "hombre": "libra"
+      },
+      {
+        "mujer": "cancer",
+        "hombre": "escorpion"
+      }, 
+      {
+        "mujer": "cancer",
+        "hombre": "piscis"
+      }, 
+      {
+        "mujer": "leo",
+        "hombre": "aries"
+      }, 
+      {
+        "mujer": "leo",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "leo",
+        "hombre": "geminis"
+      },
+      {
+        "mujer": "leo",
+        "hombre": "libra"
+      }, 
+      {
+        "mujer": "leo",
+        "hombre": "capricornio"
+      },
+      {
+        "mujer": "virgo",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "virgo",
+        "hombre": "cancer"
+      }, 
+      {
+        "mujer": "virgo",
+        "hombre": "leo"
+      }, 
+      {
+        "mujer": "virgo",
+        "hombre": "virgo"
+      }, 
+      {
+        "mujer": "virgo",
+        "hombre": "escorpion"
+      },
+      {
+        "mujer": "virgo",
+        "hombre": "capricornio"
+      }, 
+      {
+        "mujer": "virgo",
+        "hombre": "acuario"
+      },
+      {
+        "mujer": "virgo",
+        "hombre": "piscis"
+      },
+      {
+        "mujer": "libra",
+        "hombre": "aries"
+      }, 
+      {
+        "mujer": "libra",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "libra",
+        "hombre": "geminis"
+      }, 
+      {
+        "mujer": "libra",
+        "hombre": "cancer"
+      }, 
+      {
+        "mujer": "libra",
+        "hombre": "virgo"
+      }, 
+      {
+        "mujer": "libra",
+        "hombre": "escorpion"
+      }, 
+      {
+        "mujer": "libra",
+        "hombre": "acuario"
+      },
+      {
+        "mujer": "escorpion",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "escorpion",
+        "hombre": "geminis"
+      }, 
+      {
+        "mujer": "escorpion",
+        "hombre": "cancer"
+      }, 
+      {
+        "mujer": "escorpion",
+        "hombre": "virgo"
+      }, 
+      {
+        "mujer": "escorpion",
+        "hombre": "escorpion"
+      }, 
+      {
+        "mujer": "escorpion",
+        "hombre": "acuario"
+      }, 
+      {
+        "mujer": "escorpion",
+        "hombre": "piscis"
+      },
+      {
+        "mujer": "sagitario",
+        "hombre": "aries"
+      }, 
+      {
+        "mujer": "sagitario",
+        "hombre": "geminis"
+      },
+      {
+        "mujer": "sagitario",
+        "hombre": "leo"
+      }, 
+      {
+        "mujer": "sagitario",
+        "hombre": "virgo"
+      }, 
+      {
+        "mujer": "sagitario",
+        "hombre": "libra"
+      }, 
+      {
+        "mujer": "sagitario",
+        "hombre": "escorpion"
+      }, 
+      {
+        "mujer": "sagitario",
+        "hombre": "sagitario"
+      },
+      {
+        "mujer": "sagitario",
+        "hombre": "capricornio"
+      }, 
+      {
+        "mujer": "sagitario",
+        "hombre": "acuario"
+      },
+      {
+        "mujer": "capricornio",
+        "hombre": "tauro"
+      },
+      {
+        "mujer": "capricornio",
+        "hombre": "leo"
+      }, 
+      {
+        "mujer": "capricornio",
+        "hombre": "virgo"
+      }, 
+      {
+        "mujer": "capricornio",
+        "hombre": "capricornio"
+      }, 
+      {
+        "mujer": "acuario",
+        "hombre": "aries"
+      }, 
+      {
+        "mujer": "acuario",
+        "hombre": "leo"
+      }, 
+      {
+        "mujer": "acuario",
+        "hombre": "libra"
+      }, 
+      {
+        "mujer": "acuario",
+        "hombre": "sagitario"
+      },
+      {
+        "mujer": "acuario",
+        "hombre": "acuario"
+      }, 
+      {
+        "mujer": "acuario",
+        "hombre": "pìscis"
+      }, 
+      {
+        "mujer": "piscis",
+        "hombre": "aries"
+      }, 
+      {
+        "mujer": "piscis",
+        "hombre": "tauro"
+      }, 
+      {
+        "mujer": "piscis",
+        "hombre": "cancer"
+      }, 
+      {
+        "mujer": "piscis",
+        "hombre": "libra"
+      }, 
+      {
+        "mujer": "piscis",
+        "hombre": "capricornio"
+      },
+      {
+        "mujer": "piscis",
+        "hombre": "piscis"
+      }
+      ]
+}
+
+
+
+
+    
+    
+
+    

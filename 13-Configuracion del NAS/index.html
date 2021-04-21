@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Qloudea</title>
+    </head>
+    <body>
+        <header class="principal">
+            <div id="titulos">
+                <br><br>
+                <h2 id="titulo2">Configure su NAS Synology</h2>
+            </div>
+        </header>    
+        <div id="cuerpo">
+            <article>
+                <img id="foto" src="./imagenes/sin-imagen.jpg" alt="">
+                <form action="" id="formulario" onsubmit="enviar(event)">
+                    <div id="campos">
+                        <p> <label for="modelo">Modelo:</label>
+                            <select name="modelo" id="modelo" onchange="cambioModelo()"></select>
+                        </p>
+                        <p>
+                            <label for="nombre">Nombre : </label><br>
+                            <textarea name="nombre" id="nombre" cols="20" rows="5" disabled></textarea>
+                        </p>
+                        <p>
+                            <label for="precio">Precio Base:</label>
+                            <input type="number" name="precio" id="precio" min="0"  disabled>
+                        </p>
+                    </div>
+                    Seleccione la categoria de Discos:
+                    <p>
+                        <input type="radio" id="cat1" name="categoria" value="1" checked onclick="cambiaCat()">
+                        <label for="cat1">Categoria 1</label>
+                        <input type="radio" id="cat2" name="categoria" value="2" onclick="cambiaCat()">
+                        <label for="cat2">Categoria 2</label>
+                    </p>
+                    <p>
+                        <fieldset>
+                            <legend>Tipos de Disco:</legend>
+                            <p>
+                                <label for="tipoDisco1">Modelo de Categoria 1</label>
+                                <select id="tipoDisco1" name="tipoDisco"></select> 
+                            </p>
+                            <p>
+                                <label for="discos1">Cantidad:</label>
+                                <input type="number" class="cantidad" name="discos1" id="discos1" value="0" min="0" max="4">
+                            </p>    
+                            <p>
+                                <label for="tipoDisco2">Modelo de Categoria 2</label>
+                                <select id="tipoDisco2"  name="tipoDisco" value="0" disabled></select>  
+                            </p>
+                            <p>                         
+                                <label for="discos2">Cantidad:</label>
+                                <input type="number" class="cantidad" name="discos2" id="discos2" value="0" min="0" max="4" disabled>
+                            </p>
+                            
+                        </fieldset>    
+                    </p>
+                    </p>
+                        <label for="ampliacion">Ampliacion:</label>
+                        <select id="ampliacion" name="ampliacion">
+                        </select> 
+                    <p>
+                    
+                    <div id="botones"> 
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Borrar">
+                      
+                        
+                    </div>
+                </form>
+            </article>
+            <aside>
+                <table id="listado" border="1">
+                    <th>Modelo/Cantidad</th>
+                    <th>Nombre</th>
+                    <th>Precio Base</th>
+                    <th>Total</th>
+                </table>
+            </aside>
+        </div>    
+        <script src="carga.js"></script>
+    </body>
+</html>    
+

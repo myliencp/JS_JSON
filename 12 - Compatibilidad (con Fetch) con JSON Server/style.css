@@ -1,0 +1,88 @@
+html {
+    background: url('imagenes/yellow_background.png');
+}
+header {
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 6px;
+
+}
+
+#persona1 {
+    display: inline-block;
+    width: 35%;
+    margin-left: 10%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#persona2 {
+    display: inline-block;
+    width: 35%;
+    margin-left: 10%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#p1 {
+    display: inline-block;
+    width: 35%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+#p2 {
+    display: inline-block;
+    width: 35%;
+    margin-left: 10%;
+    text-align: left;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 2px 10px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+ #edad1, #edad2 {
+     width: 20%;
+ }
+
+ input[type=button] {
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    margin: auto;
+ }
+ 
+ #respuesta {
+    width: fit-content;
+    color: red;
+    font-weight: 600;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8%;
+    margin: auto;
+ }
+
+label {
+    display:block;
+    margin-top:12px;
+    letter-spacing:1px;
+}
+ 
+ 
+ 

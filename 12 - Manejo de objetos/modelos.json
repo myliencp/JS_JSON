@@ -1,0 +1,47 @@
+  [
+      {
+        "Codigo" :"DS118",
+        "Descripcion": "NAS 1 bahía - Realtek RTD1296 4 núcleos 1.4GHz, 1GB DDR4",
+        "Cantidad":"1",
+        "Precio": "190.93"
+      }, 
+      {
+        "Codigo" :"DS120J",
+        "Descripcion": "NAS 1 bahía - Marvell Armada 2 núcleos 800MHz, 512MB DDR3",
+        "Cantidad":"1",
+        "Precio": "104.06"
+      }, 
+      {
+        "Codigo" :"DS218",  
+        "Descripcion": "NAS 2 bahías - Realtek RTD1296 4 núcleos 1.4GHz, 2GB DDR4",
+        "Cantidad":"2",
+        "Precio": "291.67"
+      }, 
+      {
+        "Codigo" :"DS218PLAY",
+        "Descripcion": "NAS 2 bahías - Realtek 4 núcleos 1.4GHz, 1GB DDR4",
+        "Cantidad":"2",
+        "Precio": "262.26"
+      }, 
+      {
+        "Codigo" :"DS220", 
+        "Descripcion": "NAS 2 bahías - Intel Celeron J4025 2 Núcleos 2GHz (hasta 2.9GHz), 2GB DDR4",
+        "Cantidad":"2",
+        "Precio": "355.90"
+      }, 
+      {
+        "Codigo" :"DS220J",  
+        "Descripcion": "NAS 2 bahías - Realtek RTD1296 4 núcleos 1.4Ghz, 512MB DDR4",
+        "Cantidad":"2",
+        "Precio": "171.82"
+      }
+      ]
+
+
+
+
+
+    
+    
+
+    

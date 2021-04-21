@@ -1,0 +1,79 @@
+body {
+    padding-left: 10px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 8px;
+    background-color: rgb(206, 238, 175);
+    height: 17vh;
+}
+#campos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+#botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    height: 5vh;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 8px;
+    background-color: rgb(206, 238, 175);
+}
+#botonesIzquierda {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;        
+    width: 12vw;
+}
+#botonesDerecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;        
+    width: 8vw;
+}
+article {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+}
+#izquierda {
+    width: 80%;
+}
+#derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+#imagen {
+    width: 180px;
+}
+#lista-articulos {
+  border-collapse: collapse;
+  width: 100%;
+}
+#lista-articulos th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6d6306;
+    color: white;
+  }
+#lista-articulos td,#lista-articulos th {
+    border: 1px solid grey;
+    padding: 8px;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+
+    <form action="" onsubmit="return validar()">
+
+        Mi campo <input type="text" id="miCampo" name="miCampo">
+        <br>
+        Campo prueba <input type="text" id="prueba" name="prueba">
+        <br>
+        Mi combo <select id="miCombo">
+            <option value="">Elegir</option>
+            <option value="1">Franz</option>
+            <option value="2">Paul</option>
+            <option value="3">Renzo</option>
+        </select>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script type="text/javascript">
+        function validar() {
+            //obteniendo el valor que se puso en el campo text del formulario
+            var miCampoTexto = document.getElementById("miCampo").value;
+            //la condición
+            if (miCampoTexto.length == 0 || /^\s+$/.test(miCampoTexto)) {
+                alert('El campo de texto esta vacio o contiene espacios en blanco!');
+                return false;
+            }
+            //Validando campo prueba con expresion regular
+            var regex = /bie{1,2}n/;
+            var prueba = document.getElementById("prueba").value;
+            console.log (regex.test (prueba)); 
+            if (!regex.test(prueba)) {
+                alert('El campo prueba no es valido');
+                return false;
+            }
+            //Validando el combo select
+            var miCombo = document.getElementById("miCombo").value;
+            if (miCombo == "") {
+                alert('Debe elegir una opción en el combo!');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>

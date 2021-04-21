@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <title>Pateando Tenerife</title>
+        <style>
+
+
+       
+        .centrado {
+            display: flex;
+            justify-content: center;
+        }
+        ul {
+            display:flex;
+            justify-content:space-between;
+            padding-left: 70%;
+        }
+        li{
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .pie {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        form {
+            
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            padding-left: 30%;
+        }
+        #submit {
+            background: url(imagenes/Icono.png) no-repeat left center;
+            padding-left: 40px;
+        }
+        </style>
+    </head>
+    <header class="principal">
+        <div id="main_title">
+            <img src="imagenes/Logoten.png" alt="Zozor logo" id="logo" />
+            <h1 id="titulo1" class="centrado">Pateos por Canarias</h1>
+            <br><br>
+            <h2 class="centrado">Senderos de Tenerife</h2>
+        </div>
+                
+        <nav>
+            <ul>
+                <li><a href="#">Principal</a></li>
+                <li><a href="#">Mi Blog</a></li>
+                <li><a href="#">Resumen</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>        
+    <body>
+        <section>
+            <form id="formulario">
+                <p>Si quieres contactar con nosotros, envíanos este formulario relleno:</p>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad">
+                <label for="Altura">Altura:</label>
+                <input type="number" id="altura" name="altura">                
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" placeholder="ejemplo@email.com">
+                <label for="fecha">Fecha:</label>
+                <input type="date" name="fecha">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Danos tu mensaje" rows="10" maxlength="100" onkeyup="cuentaLetras()"></textarea>
+                <p id="texto">Este comentario tiene un maximo de 100 letras</p>
+                <div class="pie">
+                    <input id="submit" name="submit" id="submit" type="submit" value="Enviar">
+                    <!-- <input type="reset" name="reset" value="Borrar" onclick="reiniciarRestante()"> -->
+                    <input type="button" value="Borrar" onclick="resetea()">
+                </div>
+            </form>
+        </section>
+        <script>
+            function cuentaLetras() {
+                let restante = 100-document.getElementById("mensaje").value.length;
+                document.getElementById("texto").innerHTML = "Tamaño máximo 100 caracteres, quedan <span style='color:red'>"+restante+"</span>"; 
+
+            }
+            // function reiniciarRestante(){
+            //     document.getElementById("texto").innerHTML = "Tamaño máximo 100 caracteres, quedan <span style='color:red'>100</span>"; 
+                                
+            // }
+
+            function resetea(){
+                document.getElementById("formulario").reset();cuentaLetras();
+                document.getElementById("nombre").focus();/*El puntero se situa en el primer campo del formulario*/
+            }
+
+        </script>
+    </body> 
+</html>    

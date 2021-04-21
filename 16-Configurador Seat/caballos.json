@@ -1,0 +1,21 @@
+{
+    "potencia": [
+      {
+        "Descripcion": "Sin extra",
+        "Precio": "0"
+      }, 
+      {
+        "Descripcion": "120 Caballos Turbo",
+        "Precio": "650"
+      }, 
+      {
+        "Descripcion": "160 Caballos Turbo",
+        "Precio": "1300"
+      }, 
+      {
+        "Descripcion": "200 Caballos Turbo",
+        "Precio": "5500"
+      }
+      ]
+}
+

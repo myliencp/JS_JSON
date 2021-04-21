@@ -1,0 +1,20 @@
+{
+    "pintura": [
+      {
+        "Descripcion": "Sin extra",
+        "Precio": "0"
+      }, 
+      {
+        "Descripcion": "Metalizado Plata",
+        "Precio": "500"
+      }, 
+      {
+        "Descripcion": "Metalizado Azul",
+        "Precio": "600"
+      }, 
+      {
+        "Descripcion": "Metalizado Rojo",
+        "Precio": "750"
+      }
+      ]
+}

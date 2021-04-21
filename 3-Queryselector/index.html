@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <style>
+      li {
+        color: wheat;
+      }
+    </style> -->
+  </head>
+  <body>
+    <ul>
+      <li class="lista">Esto</li>
+      <li class="lista">es una</li>
+      <li class="lista">Prueba</li>
+    </ul>
+    <ul>
+      <li>Esto es </li>
+      <li>otra</li>
+      <li>Prueba</li>
+    </ul>
+    <form action="">
+      <p>
+        Elije un auto:
+        <select>
+          <optgroup label="Ferrari">
+            <option>458 Spider</option>
+            <option>F12 Berlinetta</option>
+            <option>California T</option>
+          </optgroup>
+          <optgroup label="Porsche">
+            <option>Macan</option>
+            <option>918 Spyder</option>
+          </optgroup>
+        </select>
+      </p>
+      <input type="button" value="Cambia primero" onclick="cambiaUno()" />
+      <input type="button" value="Cambia primer hijo de cada ul" onclick="cambiaTodos()" />
+      <input type="button" value="Cambia encabezados lista" onclick="cambiaLista()" />
+    </form>
+    <script>
+      function cambiaUno() {
+        let lis = document.querySelector("li")
+        lis.style.color = "blue";
+      }
+      function cambiaTodos() {
+        let lis = document.querySelectorAll("li:first-child")
+        for (let j=0; j < lis.length;j++) {
+          lis[j].style.color = "green";
+        }
+      }
+      function cambiaLista() {
+        let titulos = document.querySelectorAll("optgroup.label")
+        for (let j=0; j < titulos.length;j++) {
+          titulos[j].style.color = "red";
+        }
+      }
+    </script>
+  </body>
+</html>

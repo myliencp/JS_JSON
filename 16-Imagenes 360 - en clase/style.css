@@ -1,0 +1,135 @@
+
+body {
+    margin: 3px;
+    font-size: small;
+    font-family: 'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif;
+    background: url("./imagenes/header.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+header {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    height: 140px;
+    background: url("./imagenes/descarga.jpg");
+    background-position: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#titulo2 {
+
+    font-size: 200%;
+    color: white;
+    
+}
+#cuerpo {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: white;
+    height: 100%;
+    border: 0px;
+    padding: 0px;
+}
+
+article {
+    width: 30%;
+    background: rgb(187, 23, 23);
+    border: 1px solid black;
+    padding-left: 10px;
+} 
+
+/* img {
+    width: 800px;
+    height: auto;
+} */
+
+#foto {
+    -webkit-user-drag: none;
+    width: 335px;
+    height: auto;
+    margin-left: 2%;
+    border: black 1px solid;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+aside {
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.719);
+    border: 1px solid black;
+    /* overflow:scroll; */
+} 
+#formulario {
+    padding-top: 10px;
+    height: 70vh;
+    font-weight: bold;
+    color: black;
+}
+
+#campos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+#campos input{
+    width: 78%;
+}
+
+#botones {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+    margin-left: 20%;
+}
+
+table thead tr{
+    display:block;
+}
+
+table th,table td{
+    width:40vw;
+    border: 1px white solid;
+}
+
+
+table  tbody{
+  display:block;
+  height:69vh;
+  overflow:auto;
+}
+/* table tbody>tr>td:nth-child(4n) {
+    text-align: right;
+    width: 10%;
+}
+table tbody>tr>td:nth-child(4n-1) {
+    text-align: right;
+    width: 10%;
+}
+table tbody>tr>td:nth-child(1) {
+    text-align: center;
+    width: 10%;
+}
+table tbody>tr:last-child>td:nth-child(1n+3) {
+    color: rgb(221, 170, 31);
+    font-weight: bold;
+    width: 10%;
+
+} */
+
+select {
+    width: 80%;
+}

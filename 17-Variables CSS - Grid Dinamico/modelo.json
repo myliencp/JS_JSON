@@ -1,0 +1,16 @@
+{
+    "modelo": [
+      {
+        "Descripcion": "Seat Altea gasolina",
+        "Precio": "13500"
+      }, 
+      {
+        "Descripcion": "Seat Altea Diesel",
+        "Precio": "14800"
+      }, 
+      {
+        "Descripcion": "Seat Altea Hibrido",
+        "Precio": "17500"
+      }
+      ]
+}

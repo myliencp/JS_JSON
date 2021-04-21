@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div id="foto">
+            <picture>
+                <source media="(max-width: 800px)" srcset="imagenes/logo1.png">
+                <img id="logo" src="imagenes/logo100.png" alt="Logo empresa">    
+            </picture> 
+        </div>
+        <div id="empresa">            
+            <h1>Concesionario Seat "Las Heras"</h1>
+            <h2>Plaza España 1</h2>
+            <p>38100 -Santa Cruz de Tenerife</p>       
+        </div>
+        <div id="clientes">
+            
+            <form action="">
+                <p>
+                    <label for="cliente">Cliente:</label>
+                    <input id="cliente" type="text" maxlength="20" size="20"><br>
+                </p>
+                <p>
+                    <label for="nif">NIF:</label>
+                    <input id="nif" type="text" maxlength="9" minlength="9"><br>
+                </p>
+                <p>
+                    <label for="direccion">Dirección:</label>
+                    <input id="direccion" type="text" maxlength="20" size="20"><br>
+                </p>
+                <p>
+                    <label for="cp">CP - Pob:</label>
+                    <input id="cp" type="number" maxlength="5" minlength="5" onblur="cargaPoblacion()">
+                    <input id="poblacion" type="text"><br>
+                </p>
+                <p>
+                    <label for="provincia">Provincia:</label>
+                    <input id="provincia" type="text" maxlength="20" size="20"><br>
+                </p>
+            
+
+            </form>     
+        </div>
+    </header>
+    <article>
+        <table  id="tabla" border="1" onclick="clickTabla(event)">
+            <th>Código</th>           
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th class="columna" style="border: none"></th>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="columna"></td>
+            </tr>
+            <div id="prueba">
+                <i class="fas fa-edit"></i><button type="submit" id="editar">E</button>               
+                <i class="fas fa-eraser"></i><button type="submit" id="eliminar">B</button>
+                <i class="fas fa-save"></i><button type="submit" id="guardar" disabled>G</button>
+                <i class="fas fa-window-close"></i><button type="submit" id="cancelar">C</button>
+            </div>       
+         
+        </table>
+    </article>
+  <script src="cargadatos.js"></script>
+</body>
+</html>

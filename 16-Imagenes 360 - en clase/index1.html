@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            width: 800px;
+            height: auto;
+        }
+        #foto {
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+    <img id="foto" src="./imagenes/Arona/coche1.jpg" alt="">
+    <script>
+      let foto = document.getElementById("foto");
+      foto.addEventListener("mousedown", bajaRaton)
+      foto.addEventListener("mousemove", mueveRaton);
+      foto.addEventListener("mouseup", subeRaton);
+      foto.addEventListener("mouseleave", subeRaton);
+      function bajaRaton() {
+        console.log("bajaRaton")
+        clearInterval(id);
+        bandera = true;
+
+      }
+      function mueveRaton(e) {
+        if(bandera){
+            posX = e.pageX;
+            bandera = false;
+        }
+        if(e.buttons==1){
+            if((e.pageX - posX) < -100){
+            if (numCoche == 23) numCoche = 1
+            else numCoche++;
+            document.getElementById("foto").src = coche+numCoche+".jpg"
+            posX = e.pageX;
+            }
+            if((e.pageX - posX) > 100){
+            if (numCoche == 1) numCoche = 23
+            else numCoche--;
+            document.getElementById("foto").src = coche+numCoche+".jpg"
+            posX = e.pageX;
+            }
+        }   
+        //console.log("mueveRaton posicion",posX,",",e.pageX)
+      }
+      function subeRaton() {
+        console.log("subeRaton")
+        clearInterval(id);
+        id=setInterval('cambiaFoto()',150);
+       
+      }
+      let id=setInterval('cambiaFoto()',150);
+
+      function cambiaFoto(){
+        if (numCoche == 23) numCoche = 1
+        else numCoche++;
+        document.getElementById("foto").src = coche+numCoche+".jpg"
+      }
+
+      let coche = "./imagenes/Arona/coche";
+      let numCoche = 1;
+      let posX;
+      let bandera = false;
+    </script>
+</body>
+</html>

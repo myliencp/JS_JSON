@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web NutriForma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="cabecera">
+            <div id="logo">            
+                <img id="logo_foto" src="imagenes/logosin.png" alt="Foto Logo">
+            </div>
+            <div>
+                <h1 id="titulo1">Hablemos de nutrición
+                    <br>
+                     con NutriForma</h1>
+                <h5 id="titulo2">Técnico en dietética y nutrición</h5>
+                <p id="descripcion">En esta web encontraras información para mejorar</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav_div">
+            <a href="#principal"><p>Principal</p></a>
+            <a href="#sobreMi"><p>Sobre mi</p></a>
+            <a href="#Blog"><p>IMC</p></a>
+
+        </div>
+        <div  id="idiomas">
+            <a href=""><img src="imagenes/english.jpg" alt="ingles"></a>
+            <a href=""><img src="imagenes/france.jpg" alt="frances"></a>
+            <a href=""><img src="imagenes/spain.jpg" alt="español"></a>
+            
+    </nav>
+    <section>
+        <article id="parte1">
+            <a id="principal" >
+                <h1>Inicio</h1>
+            </a>
+            <p>
+                Ayudo a las personas a sembrar salud en su vida. Porque a través de nuestra alimentación podemos mejorar a múltiples niveles. Todo está conectado, como te alimentas hará como te sientas y como te sientas hará como pienses. Trabajo con personas que no se sienten a gusto con su cuerpo a que recuperen la autoestima, motivación y confianza. Ofrezco herramientas, apoyo y toda la información necesaria para que alcancen todo aquello que se propongan. Mi misión es ayudarte, inspirarte y ser tu apoyo en el camino hacia vivir en el cuerpo que deseas, sentirte tal como sueñas y vivir como te gustaría. Puede sonar pretencioso pero las personas que han venido a mi en busca de ayuda han experimentado una mejora en su salud, estado de ánimo, felicidad, alegría, concentración y un largo etcétera. Porque cuando vas por el camino correcto la vida se encarga de que no te falte de nada. Dicen de mi que uno de mis puntos fuertes es el cariño y la implicación que le pongo a cada una de esas personas que acuden en mi ayuda.
+            </p>
+        </article>
+        <article id="parte2">
+        <a id="sobreMi">
+            <h1 >Sobre mi</h1>
+        </a>
+        <img id="foto" src="imagenes/foto_yo.jpg" alt="foto personal">
+        <p>
+            Después de Licenciarme en Farmacia, trabajé en distintos sectores del Área Sanitaria, como farmacéutica y más tarde como asesora en productos de Investigación y diagnostico en el campo de Estrés Oxidativo y Diagnostico genético. Al mismo tiempo continuo mi formación con un Máster de Marketing Farmacéutico. Tras 3 años de trabajo nace mi primera hija Ana que me hace ver el mundo de distinta manera y decido dejarlo todo para criarla y estar junto a ella y no perderme ni un solo día a su lado. Al disponer de más tiempo decido realizar un Máster de Dietética y Dietoterapia que cambia mi visión profesional y decido Diplomarme en Dietética y Nutrición Humana al mismo tiempo que tengo a mi segundo hijo Vicente.
+            <br>
+            <br>
+            Desde entonces tengo el sueño de crear mi propia empresa y emprendo la aventura de unir mis pasiones: la ciencia, la nutrición y gastronomía.
+        </p>
+        </article>  
+        <article id="parte3">
+            <a id="Blog"></a>
+            <h1>IMC (Indice de Masa Corporal)</h1>
+            <div id="masaCorporal">
+                <p>Calcula tu condicion de riesgo</p>                
+                <p>
+                    "¿Sabías que el riesgo de que una persona sufra enfermedades coronarias depende de su edad y su índice de masa corporal?"
+                    <br>
+                </p>
+                <p id="comprueba">¡Comprueba en que situación te encuentras!</p>
+            </div>
+            <form action="" id="formulario">
+                <div id="DatosMasa">
+                    <div id="TusDatos">
+                        <p id="datos">Tus Datos</p>                    <label for="nomb">Nombre:</label>
+                        <input type="text" name="nomb" id="nombre">
+                        <label for="edades">Edad:</label>
+                        <input type="number" name="edades" id="edad">
+                        <label for="sex">Sexo:</label>
+                        <select name="sex" id="sexo">
+                            <option value="1">Hombre</option>
+                            <option value="2">Mujer</option>
+                        </select>                   
+                    </div>
+                    <div id="MasaCorporal">
+                        <p id="masa">Masa Corporal</p>       
+                        <label for="p">Peso:</label>
+                        <input type="number" name="p" id="peso" min="0">
+                        <label for="altu">Altura:</label>
+                        <input type="number" name="altu" id="altura" min="0">
+                        <label for="sel">Ejercicio:</label>
+                        <select name="sel" id="ejercicio">
+                            <option value="0">Poco o ningún ejercicio</option>
+                            <option value="1">Ejercicio ligero (1 a 3 días a la semana) </option>
+                            <option value="2">Ejercicio moderado (3 a 5 días a la semana</option>
+                            <option value="3">Deportista (6-7 días a la semana)</option>
+                            <option value="4">Atleta (Entrenamientos mañana y tarde</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="boton">
+                    <input type="button"  id="botonComprobar" value="Comprobar" onclick="calcularIMC()">
+                </div>
+                <div id="resultado">
+                    <div id="resultado1"> 
+                        <p>Su IMC es de: </p>
+                        <p>Se le asocia la condición de:</p>
+                        <p>Calorías a consumir diariamente:</p>
+                        <p>Si quiere rebajar un kilo a la semana, debe consumir: </p>
+                    </div>
+                    <div id="resultado2">
+                    <p id="respuesta1"></p>
+                    <p id="respuesta2"></p>
+                    <p id="respuesta3"></p>
+                    <p id="respuesta4"></p>
+                     </div>
+                </div>
+            </form>
+        </article>
+    </section>
+    <footer>
+        <nav id="foot_nav">
+            <a href="#principal"><p>Volver</p></a>
+            <a href="#Blog"><p>www.tuscalorias.com</p></a>     
+            <a href="http://www.interior.gob.es/politica-de-cookies" target="_blank">
+                <p>Politica de Cookies</p>
+            </a>
+        </nav>
+    </footer>
+    <script src="masa.js"></script>
+</body>
+</html>

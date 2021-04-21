@@ -1,0 +1,60 @@
+{
+  "productos": [
+    {
+      "codigo": "6BE61EA",
+      "descripcion": "ORDENADOR HP 290 G2 G5500/4GB/1TB/DVD/FREEDOS",
+      "stock": "5",
+      "precio": "235",
+      "foto" : "Foto1.jpg"
+    },
+    {
+      "codigo": "GB-MTC-DC-4100",
+      "descripcion": "ORDENADOR PB GIGABYTE MONTECARLO G5400/4GB/SSD240GB",
+      "stock": "3",
+      "precio": "243",
+      "foto" : "Foto2.jpg"
+    },
+    {
+      "codigo": "GB-MHTFX-R3-4100",
+      "descripcion": "ORDENADOR PB GIGABYTE MONTECARLO AMD RYZEN-3 4GB/HD 1TB",
+      "stock": "6",
+      "precio": "275",
+      "foto" : "Foto3.jpg"
+    },
+    {
+      "codigo": "GB-MTC-I3F-8240",
+      "descripcion": "ORDENADOR PB GIGABYTE MONTECARLO I3 9100F/8GB/SSD240GB",
+      "stock": "2",
+      "precio": "352",
+      "foto" : "Foto4.jpg"
+    },
+    {
+      "codigo": "GB-MHTFX-I3F-8240",
+      "descripcion": "ORDENADOR PB GIGABYTE MANHATTAN MATX 9TH I3-9100F/8GB/SSD240GB/GT710",
+      "stock": "4",
+      "precio": "361",
+      "foto" : "Foto5.jpg"
+    },
+    {
+      "codigo": "GB-MHTFX-R5-4100",
+      "descripcion": "ORDENADOR PB GIGABYTE MONTECARLO AMD RYZEN-5 2600/4GB/HD1TB/LMT/GT710",
+      "stock": "1",
+      "precio": "375",
+      "foto" : "Foto6.jpg"
+    },
+    {
+      "codigo": "GB-MTC-DC-4100-W10P",
+      "descripcion": "ORDENADOR PB GIGABYTE MONTECARLO G5400/4GB/SSD240GB/LMT/3Y/W10PRO",
+      "stock": "1",
+      "precio": "385",
+      "foto" : "Foto7.jpg"
+    },
+    {
+      "codigo": "6BE61EA-W10P",
+      "descripcion": "ORDENADOR HP 290 G2 G5500/4GB/1TB/DVD/TECLADO+RATON/W10P",
+      "stock": "1",
+      "precio": "395",
+      "foto" : "Foto8.jpg"
+    }
+  ]
+}

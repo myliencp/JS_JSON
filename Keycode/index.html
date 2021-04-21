@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Press any key on the keyboard in the input field to get the Unicode character code and the Unicode key code of the pressed key.</p>
+
+<p><strong>Note:</strong> The keyCode property does not work on the onkeypress event for non-printable, function keys (like CAPS LOCK, CTRL, ESC, F12, etc.).</p>
+
+<input id="texto" type="text" size="50" onkeypress="uniCharCode(event)" onkeydown="uniKeyCode(event)"onkeyup="funciones(event)"> 
+
+<p>onkeypress - <span id="demo"></span></p>
+<p>onkeydown - <span id="demo2"></span></p>
+<p>Cantidad de caracteres - <span id="largo"></span></p>
+<p>Posicion del primer guión - <span id="posicionP"></span></p>
+<p>Posicion del último guión - <span id="posicionU"></span></p>
+<p>Texto cortado - <span id="subtexto"></span></p>
+<p>Sustituir guiones medios por bajos - <span id="sustituir"></span></p>
+<p>Caracter en la posicion 5 - <span id="car5"></span></p>
+<p>Codigo del Caracter en la posicion 5 - <span id="carcode5"></span></p>
+<p>Vector de elementos - <span id="vector"></span></p>
+<p>Quitar guiones - <span id="quitar"></span></p>
+
+
+<script>
+function uniCharCode(event) {
+  var char = event.which || event.keyCode;
+  if(!lista.includes(char)){
+      event.preventDefault();   
+  }
+  
+  document.getElementById("demo").innerHTML = "The Unicode CHARACTER code is: " + char;
+ 
+}
+function funciones(event){
+    let valor = document.getElementById("texto").value;
+    document.getElementById("largo").innerHTML = valor.length;
+    document.getElementById("posicionP").innerHTML = valor.indexOf("-");
+    document.getElementById("posicionU").innerHTML = valor.lastIndexOf("-");
+    document.getElementById("subtexto").innerHTML = valor.slice(valor.indexOf("-")+1,valor.lastIndexOf("-"));
+    document.getElementById("sustituir").innerHTML = valor.replace(/-/g,"_");
+    document.getElementById("car5").innerHTML = valor.charAt(5);
+    document.getElementById("carcode5").innerHTML = valor.charCodeAt(5);
+    document.getElementById("vector").innerHTML = valor.split("-");
+    document.getElementById("quitar").innerHTML = valor.quitaguiones();
+    
+    console.log(valor.split("-"));
+}
+
+function uniKeyCode(event) {
+  var key = event.keyCode;
+  document.getElementById("demo2").innerHTML = "The Unicode KEY code is: " + key;
+}
+
+let lista=[45,48,49,50,51,52,53,54,55,56,57];/*VECTOR Listado de caracteres 0-9 permitidos*/
+
+String.prototype.quitaguiones = function (){
+    var dato= this.valueOf();
+    return dato.replace(/-/g,"");
+}
+
+</script>
+
+</body>
+</html>

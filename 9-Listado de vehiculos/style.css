@@ -1,0 +1,76 @@
+body {
+    margin: 0px;
+    background: #8d3838;
+    background: url(imagenes/descarga.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+
+}
+header {
+    display:flex;
+    flex-flow: column center;
+    width: 100%;
+    padding-left: 5%;
+    color: white;
+    
+}
+
+#cuerpo {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #8d3838;
+    height: 60vh;
+}
+
+article {
+    width: 30%;
+    color: cornsilk;
+    background:black ;
+    border: 1px solid black;
+    padding-left: 10px;
+} 
+
+aside {
+    color: white;
+    font-weight: bold;
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    background: url(imagenes/21960.jpg) center;  
+    border: 1px solid black;
+    /* overflow:scroll; */
+} 
+#formulario {
+    padding-top: 10px;
+    height: 60vh;
+}
+
+#botones {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+table thead tr{
+    display:block;
+   
+}
+
+table th,table td{
+    width:17vw;
+    border: 2px black solid;
+}
+
+
+table  tbody{
+  display:block;
+  height:59vh;
+  overflow:auto;
+}
+
+

@@ -1,0 +1,3 @@
+Ejemplos
+https://www.neoguias.com/funciones-flecha-es6/
+https://www.w3schools.com/js/js_arrow_function.asp

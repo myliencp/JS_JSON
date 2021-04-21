@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #exterior1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: green;
+            width: 30vw;
+            height: 20vh;
+        }
+        #exterior2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: blue;
+            width: 30vw;
+            height: 20vh;
+        }
+        #exterior3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgb(194, 150, 28);
+            width: 30vw;
+            height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="exterior1">
+            <button id="boton1">Boton 1 - Captura</button>
+    </div>
+    <div id="exterior2">
+        <button id="boton2">Boton 2 - Burbuje</button>
+    </div>
+    <div id="exterior3">
+        <button id="boton3">Boton 3 - Sin Propagacion</button>
+        <button id="boton3">Boton 4 - Sin Click</button>
+    </div>    
+    <script>
+        document.getElementById("exterior1").addEventListener("click", exterior1, true);
+        document.getElementById("boton1").addEventListener("click", boton1, true);
+
+        document.getElementById("exterior2").addEventListener("click", exterior2, false);
+        document.getElementById("boton2").addEventListener("click", boton2, false);
+
+        document.getElementById("exterior3").addEventListener("click", exterior3, false);
+        document.getElementById("boton3").addEventListener("click", boton3, false);
+        
+        // Comportamiento de la Captura
+        function exterior1() {
+            alert("Doy click en exterior1");
+        }
+        function boton1() {
+            alert("Doy click en boton1");
+        }
+
+        //Comportamiento de la Burbuja
+        function exterior2() {
+            alert("Doy click en exterior2");
+        }
+        function boton2() {
+            alert("Doy click en boton2");
+        }
+
+        //Evitando propagación
+        function exterior3() {
+            alert("Doy click en exterior3");
+        }
+        function boton3(e) {
+            e.stopPropagation();
+            alert("Doy click en boton3");
+        }
+
+    </script>
+</body>
+</html>

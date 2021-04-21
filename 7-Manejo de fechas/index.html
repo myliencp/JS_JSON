@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>COMPARACIÓN DE FECHAS</h1>    
+    <label for="fecha1">Fecha Inicio:</label>
+     <input type="date" name="fecha1" id="fecha1">
+     <label for="fecha2">Fecha Fin:</label>
+     <input type="date" name="fecha2" id="fecha2">
+     <input type="button" value="Comparar" onclick="diferencia()">
+     <p id="resultado"></p>
+     <p>Fecha1 + 30 dias =</p>
+     <p id="resultado1"></p>
+     <script>
+         function diferencia(){
+             let fecha1 = new Date(document.getElementById("fecha1").value);
+             let fecha2 = new Date(document.getElementById("fecha2").value);
+             console.log(fecha1,fecha2);     
+             let resultado = fecha2.valueOf() - fecha1.valueOf();
+             console.log(resultado/(1000*60*60*24));  //Convierte la fecha de milisegundos a dias de diferencia.
+             let resultado1 = new Date(fecha1.valueOf()+(30*24*60*60*1000));
+             document.getElementById("resultado1").innerHTML = resultado1;
+         }
+     </script>
+
+</body>
+</html>

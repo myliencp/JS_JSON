@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Personal</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>          
+    <header>
+        <h1>TOTORO S.A</h1>
+        <h2>Listado de Personal</h2>
+    </header>
+    <div id="cuerpo">   
+        <article>
+            <div id="form">
+                <h2>Ficha de Personal</h2>
+                <form action="" id="formulario" onsubmit="validacion()">
+                    <p>DNI:<input type="number"  id="dni" name="dni" min="00000000" max="99999999" maxlength="8" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onblur="letraDNI()"> 
+                    <label type="text" id="dniL"></p>
+                    <div class="datos">                         
+                        <p>Nombre:<input type="text" id="nombre" ></p>                    
+                        <p>Apellidos:<input type="text" id="apellidos"></p>
+                        <p>Teléfono:<input type="number" id="telefono" maxlength="9" pattern="^[9|8|7|6]\d{8} $" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"><p> 
+                    </div> 
+                    <div id="botones">                  
+                        <input type="button" id="enviar"value="Enviar" onclick="validacion()" >
+                        <input type="button" id="borrar" value="Borrar" onclick= "resetea()">
+                    </div>
+                </form> 
+            </div>             
+
+           
+        </article>
+        <aside>
+            <div id="divTabla" >
+
+        
+                <table id="tabla" border="1" >
+                    <thead>
+                        <tr>
+                            <th>DNI</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead> 
+                    <tbody id="datos">
+                    </tbody>   
+
+                </table>
+
+            </div>
+        </aside>
+    </div>
+ <script src="javascript.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root{
+    --columnas:0;
+}
+#listado{
+    display: grid;
+    grid-template-columns: repeat(var(--columnas), 1fr);
+}
+
+.lineas{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(68, 9, 124);    
+    background: rgb(211, 205, 205);
+}
+
+.titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background: rgb(238, 238, 127);
+    font-weight: bold;
+    font-size: 18px;
+}
+.totales{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

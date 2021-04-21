@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+
+  </head>
+  <body>
+      <h1>Ejemplo de QuerySelector </h1>
+    <ul>
+      <li class="lista">- A las 10 te pito y bajas.</li>
+      <li class="lista">- ¿Te has comprado un coche?</li>
+      <li class="lista">- No, un pito.</li>
+    </ul>
+    <ul>
+      <li>- Ayer llamé a la policía porque unos ladrones robaron en mi casa y se llevaron hasta los vasos.</li>
+      <li>- ¿Y los detuvo?</li>
+      <li>- Sí, sí, los de tubo también.</li>
+    </ul>
+    <form action="">
+      <p>
+        Elije un auto:
+        <select>
+          <optgroup label="Ferrari">
+            <option>458 Spider</option>
+            <option>F12 Berlinetta</option> 
+            <option>California T</option>
+          </optgroup>
+          <optgroup label="Porsche">
+            <option>Macan</option>
+            <option>918 Spyder</option>
+          </optgroup>
+        </select>
+      </p>
+      <input type="button" value="Cambia primero" onclick="cambiaUno()" />
+      <input type="button" value="Cambia primer hijo de cada ul" onclick="cambiaTodos()" />
+      <input type="button" value="Cambia encabezados lista" onclick="cambiaLista()" />
+    </form>
+    <script>
+      function cambiaUno() {
+        let lis = document.querySelector("li")
+        lis.style.color = "darkblue";
+      }
+      function cambiaTodos() {
+        let lis = document.querySelectorAll("li:first-child")
+        for (let j=0; j < lis.length;j++) {
+          lis[j].style.color = "purple";
+        }
+      }
+      function cambiaLista() {
+        let titulos = document.querySelectorAll("optgroup")
+        let elementos =document.querySelectorAll("option")
+        for (let j=0; j < titulos.length;j++) {
+          titulos[j].style.color = "red";        }
+
+        for (let x=0; x < elementos.length;x++){
+            elementos[x].style.color = "black"
+        }
+      }
+    </script>
+  </body>
+</html>

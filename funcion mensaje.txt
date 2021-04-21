@@ -1,0 +1,89 @@
+function $(e) {
+    return document.querySelector(e);
+}
+// const $= _=> document.querySelector(_)
+
+//hago un array de strings y lo convertire en un finchero JSON
+var texto = '{"escala": [' +
+    '{"comentario": "Peso Insuficiente", "imcminimo": "0", "imcmaximo": "18.5"},' +
+    '{"comentario": "Normopeso", "imcminimo": "18.5", "imcmaximo": "24.9"},' +
+    '{"comentario": "Sobrepeso grado I", "imcminimo": "24.9", "imcmaximo": "26.9"},' +
+    '{"comentario": "Sobrepeso grado II (preobesidad)", "imcminimo": "26.9", "imcmaximo": "29.9"},' +
+    '{"comentario": "Obesidad de tipo I", "imcminimo": "29.9", "imcmaximo": "34.9"},' +
+    '{"comentario": "Obesidad de tipo II", "imcminimo": "34.9", "imcmaximo": "39.9"},' +
+    '{"comentario": "Obesidad de tipo III (mórbida)", "imcminimo": "39.9", "imcmaximo": "49.9"},' +
+    '{"comentario": "Obesidad de tipo IV (extrema)", "imcminimo": "49.9", "imcmaximo": "999"}]}';
+
+// convierto mi array en fichero JSON
+var datos = JSON.parse(texto);
+console.log(datos);
+
+function mensaje() {
+    var altura = $("#altura").value;
+    var peso = $("#peso").value;
+    var edad = $("#edad").value;
+    var ejercicio = $("#ejercicio").value;
+    //toFixed es un metodo que me deja dos numeros detras de la coma
+    var imc = (peso / (altura * altura)).toFixed(2);
+    console.log(imc);
+
+    //el imc debe estar entre un min y un max
+    //por ello hay que setear un filtrado con dos condiciones
+    //genero una nueva var filtrado que almacenara los datos
+    var filtrado = datos.escala.filter(dataFiltrar);
+    function dataFiltrar(elemento) {
+        return (imc > elemento.imcminimo) && (imc <= elemento.imcmaximo);
+    };
+    console.log(filtrado);
+
+    let factor = [1.2, 1.375, 1.55, 1.72, 1.9];
+    /* 
+    web: https://computerhoy.com/noticias/life/esta-formula-te-dice-cuantas-calorias-debes-comer-dia-adelgazar-286837
+    Hombres: TMB = 66 + (13,7 x peso en kg) + (5 x altura en cm) - (6,75 x edad en años)
+    Mujeres: TMB = 655 + (9,6 x peso en kg) + (1.8 x altura en cm) - (4,7 x edad en años) 
+    */
+
+    if ($("#sexo").value=1) {
+        var calorias = ( ( 66 + (13.7 * peso) + (5 * altura * 100) - (6.75 * edad) ) * factor[ejercicio]).toFixed(0);
+    } else {
+        var calorias = ((655 + (9.6 * peso) + (1.8 * altura * 100) - (4.7 * edad)) * factor[ejercicio]).toFixed(0); 
+    }
+
+    $("#resultado1").style.visibility = "visible";
+    $("#respuesta1").innerHTML = `${imc}`;
+
+    $("#resultado2").style.visibility = "visible";
+    $("#respuesta2").innerHTML = `${filtrado[0].comentario}`;
+
+    $("#resultado3").style.visibility = "visible";
+    $("#respuesta3").innerHTML = `${calorias}`;
+
+    $("#resultado4").style.visibility = "visible";
+    $("#respuesta4").innerHTML = `${calorias - 1000}`;        
+}
+window.onload = function () {
+    fetch('textos.json')
+        .then(respuesta => respuesta.json()) //respuesta tipo json
+        .then(textos => {
+            idiomas = textos.idiomas;
+        })
+        .catch(error => console.log('error en carga de idiomas : ' + error.mensaje))
+};
+
+function cambiaidioma(idiomaactual) {
+    // cada objeto del json le llamo abuscar y para cada uno de ellos con key idioma y le asigno el valor idiomactual
+    // no itero, y utilizo find porque solo quiero encontrar un objeto
+    //abuscar podria haberse llamado cualquier cosa
+    var pais = idiomas.find(abuscar => abuscar.idioma === idiomaactual);
+    console.log(pais);
+    
+    //itero dentro de un objeto json y paso por todos los key de ese elemento seleccionado (pais)
+    for (var clave in pais) {
+        console.log("la clave es: " + clave + " y vale :" + pais[clave]);
+        if (clave != "idioma")
+            //como clave es un texto 
+            document.getElementById(clave).innerHTML = pais[clave];
+    }
+}
+
+var idiomas;

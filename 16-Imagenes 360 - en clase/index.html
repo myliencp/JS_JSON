@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.rawgit.com/mistic100/Photo-Sphere-Viewer/3.1.0/dist/photo-sphere-viewer.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/threejs/r70/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/mistic100/Photo-Sphere-Viewer/3.1.0/dist/photo-sphere-viewer.min.js"></script>
+    <title>Imagenes 360</title>
+    <style>
+      #photosphere {
+        height: auto;
+        width: 50%;
+        margin: 0 auto;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #arona {
+        -webkit-user-drag: none;
+      }
+      .opacidad{
+        transition: opacity 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="photosphere"></div>
+    <br />
+   
+
+    <script>
+      //https://juanca.e-lexia.com/2018/06/insertar-fotografia-esferica-360-web/
+      // 360 viewer
+      var PSV = new PhotoSphereViewer({
+        panorama: "./imagenes/mar.jpg",
+        container: "photosphere",
+
+        navbar: "autorotate zoom download fullscreen",
+        caption: "texto",
+        default_fov: 65,
+        mousewheel: false,
+        size: {
+          height: 400,
+        },
+      });
+      //loading_img: 'Aquí va la URL del icono',
+   
+    </script>
+  </body>
+</html>

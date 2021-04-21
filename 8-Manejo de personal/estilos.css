@@ -1,0 +1,78 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: grey;    
+    background: url(imagenes/56258-totoro.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;  
+    
+}
+header{
+    
+    background-color:grey;
+    text-align: center;
+
+}
+#cuerpo {
+    width: 100%;    
+    display:flex;      
+   }
+/* aside vertical */
+#cuerpo > aside {
+    width: 60%;  
+    background-color: darkgrey;
+
+}
+#cuerpo > article {
+    width: 40%;
+    height: 500px;
+    position: static; 
+    background-color: ivory;
+ 
+}
+#form{   
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    box-sizing: border-box;   
+
+}
+.datos input{
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    font-size: 14px;    
+} 
+#botones input {
+    margin-top: 10%;
+    width: 30%;
+    height: 30px;
+    border:1px solid #000;
+    border-radius:5px;
+    color:#fff;
+    background-color:rgb(56, 55, 55);    
+
+}
+#botones input:hover{
+	cursor:pointer;
+}
+
+#borrar {
+    margin-left: 10%;
+}
+
+#enviar {
+    margin-left: 10%;
+}
+
+#tabla th{
+    width: 180px;
+}
+#divTabla{
+    overflow:scroll;
+    height:500px;
+    width:100%;
+}
+

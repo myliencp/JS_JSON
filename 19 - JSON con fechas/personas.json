@@ -1,0 +1,31 @@
+  [
+      {
+        "nombre" :"Juan",
+        "apellido": "Perez",
+        "fecha_nacimiento":"1967-04-01"
+      }, 
+      {
+        "nombre" :"Luis",
+        "apellido": "González",
+        "fecha_nacimiento":"1988-06-20"
+      }, 
+      {
+        "nombre" :"Ana",
+        "apellido": "Vargas",
+        "fecha_nacimiento":"1973-05-01"
+      },
+      {
+        "nombre" :"Mylien",
+        "apellido": "Chac",
+        "fecha_nacimiento":"1981-11-18"
+      } 
+      ]
+
+
+
+
+
+    
+    
+
+    

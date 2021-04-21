@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="modal.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="alDarClick">
+        <h2>Ficha de Alumnos</h2>
+    </header>
+    <nav class="alDarClick">
+        <label for="filtro">Dato a buscar :</label>
+        <input type="text" name="filtro" id="filtro" onkeyup="filtrar()">
+    </nav>
+    <article class="alDarClick">
+        <div id="izquierda">
+            <table id="lista-alumnos">
+                <thead id="titulos">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </article>
+    <script src="carga.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+    "unidades": [
+      {
+        "Descripcion": "2TB ST2000VN004 Seagate IronWolf",
+        "Categoria": "1",
+        "Precio": "85.50"
+      }, 
+      {
+        "Descripcion": "3TB ST3000VN007 Seagate IronWolf",
+        "Categoria": "1",
+        "Precio": "103.80"
+      }, 
+      {
+        "Descripcion": "4TB ST4000VN008 Seagate IronWolf",
+        "Categoria": "1",
+        "Precio": "112.20"
+      }, 
+      {
+        "Descripcion": "6TB ST6000VN001 Seagate IronWolf ",
+        "Categoria": "1",
+        "Precio": "176.50"
+      }, 
+      {
+        "Descripcion": "8TB ST8000VN004 Seagate IronWolf ",
+        "Categoria": "1",
+        "Precio": "231.30"
+      }, 
+      {
+        "Descripcion": "4TB 0B35950 - HUS726T4TALA6L4 WD Ultrastar",
+        "Categoria": "2",
+        "Precio": "147.50"
+      },
+      {
+        "Descripcion": "6TB 0B36039 - HUS726T6TALE6L4 WD Ultrastar",
+        "Categoria": "2",
+        "Precio": "165.90"
+      },
+      {
+        "Descripcion": "8TB 0B36404 - HUS728T8TALE6L4 WD Ultrastar",
+        "Categoria": "2",
+        "Precio": "204.90"
+      },
+      {
+        "Descripcion": "10TB 0F27606 - HUH721010ALE604 WD Ultrastar",
+        "Categoria": "2",
+        "Precio": "269.90"
+      },
+      {
+        "Descripcion": "12TB 0F30146 - HUH721212ALE604 WD Ultrastar",
+        "Categoria": "2",
+        "Precio": "280.90"
+      },
+      {
+        "Descripcion": "14TB 0F31284 - WUH721818ALE6L4 WD Ultrastar",
+        "Categoria": "2",
+        "Precio": "306.00"
+      },
+      {
+        "Descripcion": "16TB 0F38462 - WUH721816ALE6L4 WD Ultrastar",
+        "Categoria": "2",
+        "Precio": "369.95"
+      }
+      ]
+}
+
+
+
+
+    
+    
+
+    

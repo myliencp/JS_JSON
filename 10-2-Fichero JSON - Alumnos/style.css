@@ -1,0 +1,152 @@
+body {
+    padding-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image:url(imagenes/fondo-de-pantalla.jpg);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    background-color:grey;
+    height: 10vh;
+}
+h2{
+    text-align: center;
+}
+#campos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    width: 60%;
+  
+}
+
+#campos input{
+    margin-left: 1%;
+    margin-right: 2%;
+}   
+
+#botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+    height: 5vh;    
+}
+
+#botones input{
+    background-color: grey;
+    color: honeydew;
+    font-weight: bold;
+    border-radius: 10%;
+    
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 8px;
+    background-color:rgb(176, 189, 189);
+   
+}
+#botonesIzquierda {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;        
+    width: 15vw;
+    margin-bottom: 1%;
+    margin-left: 40%;
+    
+  
+}
+#botonesDerecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;        
+    width: 10vw;
+    margin-bottom: 1%;
+    margin-left: 50%;
+    
+}
+article {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+}
+#izquierda {
+    width: 80%;
+}
+#derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+#imagen {
+    width: 180px;
+}
+#lista-alumnos {
+  border-collapse: collapse;
+  width: 100%;
+}
+#lista-alumnos th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgb(176, 189, 189);
+    color: white;
+  }
+#lista-alumnos td,#lista-alumnos th {
+    border: 1px solid grey;
+    padding: 8px;
+    
+}
+#fotografia {
+    width: 100px;
+    box-sizing: "none";
+    float: right;
+    margin-right: 6%;
+    margin-top: -6%;
+}
+#nuevaFoto{
+    float: right;
+    margin-left: 70%;
+    margin-top: 2%;
+
+}
+@media (max-width: 800px){
+    header{
+        
+        height: auto;
+    }
+    #campos{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #botones{
+        margin-bottom:5% ;
+        width: 40%;
+    } 
+    
+    #botonesDerecha {
+
+     margin-left: auto;
+     margin-top: 34%;
+       
+    }
+    #fotografia {
+        margin-top: -30%;
+        margin-right: 20%;
+    }
+    #imagen {
+       display: none;
+    }
+}
+    

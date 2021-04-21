@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+<header>
+    <h2>Sistema de analisis de compatibilidad</h2>
+    <h2 id="p1">Persona 1</h2>
+    <h2 id="p2">Persona 2</h2>
+</header>
+    
+    <form id="persona1" action="">
+        <label>Nombre :</label>
+        <input type="text" id="nombre1" value="" /> 
+        <label>Sexo :</label>
+        <select id="sexo1" name="sexo1">
+            <option value="0">Hombre</option>
+            <option value="1">Mujer</option>
+        </select>
+        <label>Edad :</label>
+        <input type="text" id="edad1" value="" size="2" /> 
+        <label>Musica :</label>
+        <select id="musica1" name="musica1">
+            <option value="0">Pop</option>
+            <option value="1">Rock</option>
+            <option value="2">Heavy</option>
+            <option value="3">Metal</option>
+            <option value="4">Clásica</option>
+            <option value="5">Opera</option>
+        </select>
+        <label>Horoscopo :</label>
+        <select id="horoscopo1" name="horoscopo1">
+            <option value="aries">Aries</option>
+            <option value="tauro">Tauro</option>
+            <option value="geminis">Geminis</option>
+            <option value="cancer">Cancer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="escorpio">Escorpio</option>
+            <option value="sagitario">Sagitario</option>
+            <option value="capricornio">Capricornio</option>
+            <option value="acuario">Acuario</option>
+            <option value="piscis">Piscis</option>
+        </select> 
+    </form>
+    
+    <form id="persona2" action="">
+        <label>Nombre :</label>
+        <input type="text" id="nombre2" value="" /> 
+        <label>Sexo :</label>
+        <select id="sexo2" name="sexo2">
+            <option value="0">Hombre</option>
+            <option value="1">Mujer</option>
+        </select>
+        <label>Edad :</label>
+        <input type="text" id="edad2" value="" size="2" /> 
+        <label>Musica :</label>
+        <select id="musica2" name="musica2">
+            <option value="0">Pop</option>
+            <option value="1">Rock</option>
+            <option value="2">Heavy</option>
+            <option value="3">Metal</option>
+            <option value="4">Clásica</option>
+            <option value="5">Opera</option>
+        </select>
+        <label>Horoscopo :</label>
+        <select id="horoscopo2" name="horoscopo2">
+            <option value="aries">Aries</option>
+            <option value="tauro">Tauro</option>
+            <option value="geminis">Geminis</option>
+            <option value="cancer">Cancer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="escorpio">Escorpio</option>
+            <option value="sagitario">Sagitario</option>
+            <option value="capricornio">Capricornio</option>
+            <option value="acuario">Acuario</option>
+            <option value="piscis">Piscis</option>
+        </select> 
+    </form>
+    <input type="button" value="Click me" onclick="mensaje()">
+    <p id="respuesta"></p>
+    <script>
+        /*var requestURL = 'signos.json';
+        var request = new XMLHttpRequest();*/
+        
+
+        
+
+        function mensaje() {
+            
+            // Primero se evalúan las condiciones eliminatorias 
+            
+            //Condición 1 : Tienen menos de 10 años de diferencia
+            var edad1 = document.getElementById("edad1").value;
+            var edad2 = document.getElementById("edad2").value;
+            if (edad1 - edad2 > 10  || edad2 - edad1 > 10) {
+                document.getElementById("respuesta").innerHTML = 'Atención: solo se pueden evaluar personas con menos de 10 años de diferencia de edad'
+                return;
+            }
+            
+            //Condicion 2 : Misma Música
+            var musica1 = document.getElementById("musica1").value;
+            var musica2 = document.getElementById("musica2").value;
+            if (musica1 != musica2) {
+                document.getElementById("respuesta").innerHTML = 'Atención: solo se pueden evaluar personas con los mismos gustos musicales'
+                return;
+            }
+
+            //Condicion 4 : Sexo diferente
+            var sexo1 = document.getElementById("sexo1").value;
+            var sexo2 = document.getElementById("sexo2").value;
+            if (sexo1 == sexo2) {
+                document.getElementById("respuesta").innerHTML = 'Atención: solo se pueden evaluar personas de distinto sexo'
+                return;
+            }
+            
+            //Condicion 5  Signos compatibles
+            let mujer,hombre;
+            if (sexo1 == 1) {
+                mujer = document.getElementById("horoscopo1").value;
+                hombre = document.getElementById("horoscopo2").value;
+            }else{
+                mujer = document.getElementById("horoscopo2").value;
+                hombre = document.getElementById("horoscopo1").value;
+            }
+            console.log("resultado del rinero",vector[1].hombre);
+            let bandera = false;
+            for (i=0;i<vector.length;i++) {
+                if (vector[i].hombre == hombre && vector[i].mujer == mujer) bandera = true;
+            }
+            if (bandera)   document.getElementById("respuesta").innerHTML = 'Atención: SI son compatibles'
+            else document.getElementById("respuesta").innerHTML = 'Atención: NO son compatibles';
+        }
+
+        async function leer() {
+            const elem = "./datos.json";
+            let obj = await fetch(elem);
+            let content = await obj.text();
+            vector = JSON.parse(content).signos;
+            console.log(vector);
+        };
+
+        window.onload = function() {
+            leer();
+        };
+        let vector = [];
+    </script>
+
+</body>
+</html>
+

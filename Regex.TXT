@@ -1,0 +1,9 @@
+Manuales Expresiones regulares
+https://blog.bitsrc.io/a-beginners-guide-to-regular-expressions-regex-in-javascript-9c58feb27eb4
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions/Hoja_de_referencia
+https://docs.microsoft.com/es-es/dotnet/standard/base-types/regular-expression-language-quick-reference
+https://www.bbvaapimarket.com/es/mundo-api/expresiones-regulares-en-programacion-ejemplos-practicos-para-javascript/
+
+
+
+^[1-2]\.\d{2}$

@@ -1,0 +1,118 @@
+header {
+    display: flex;
+    justify-content: stretch;
+    font-size: 60%;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    border: 1px solid #eebb55;
+    border-radius: 7pt;
+    background: #ffeebb;
+    flex-grow: 1;
+}
+header h1 {
+    font-family: 'Staccato', serif;
+    font-size: 2.2em;
+}
+header h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.6em;
+}
+header p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+}
+header #nombre {
+    flex-grow: 2;
+}
+
+/*Datos del Cliente */
+#cliente {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4em;
+    width: 40%;
+    margin-left: auto;
+    background-color: rgb(196, 166, 34);
+    border-radius: 7pt;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+#cliente label {
+    display: inline-block;
+    float: left;
+    width: 15%;
+}
+#cliente input {
+    display: inline-block;
+    float: left;
+}
+#poblacion {
+    margin-left: 35%;
+    height: 1.4em;
+    width: 30%;
+    background: white;
+    border: 1px grey solid;
+}
+
+/* Configuracion de la tabla */
+#tabla th, #tabla td {
+    /* Esta es la separación de los bordes entre filas y columnas */
+    border-spacing: 0;
+    border: 1px solid black;
+    border-collapse: separate;
+}
+#tabla {
+     width: 100%;
+     margin-top: 20px;
+     margin: 4px;
+    /* flex-grow: 1;*/
+}
+#tabla td {
+    height: 22px;
+}
+#tabla, th,td {
+    /* border-spacing: 0ch; */
+    height: 1em;
+}
+#tabla td:first-child {
+    width: 11%;
+}
+#tabla td:nth-child(2){
+    width: 59%;
+    /*flex-grow: 2;*/
+}
+#tabla td:nth-child(3){
+    text-align: right;
+    width: 10%;
+}
+#tabla td:nth-child(4){
+    width: 10%;
+    text-align: right;
+}
+#tabla td:last-child {
+    display: inline;
+    border: none;
+    background-color: none;
+    width: 8%;
+}
+#tabla th:last-child {
+    border: none;
+}
+
+#tit-subtotal,#tit-igic,#tit-total {
+    padding-right: 5px;
+}
+
+/* Tamaño de los botones */
+
+#editar,#guardar,#eliminar,#cancelar {
+    /*width: 23%;*/
+    z-index: 20;
+}
+.invisible {
+    display: none;
+}
+
+ 
+ 
